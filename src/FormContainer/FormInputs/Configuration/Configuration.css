@@ -2,3 +2,7 @@
     border: 1px solid var(--led_screen_border_color);
     padding: var(--led_screen_app_padding) calc(var(--led_screen_app_padding) / 1.5);
 }
+
+.led-screen-form-configuration label {
+    display: block;
+}

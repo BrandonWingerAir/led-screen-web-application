@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.led-screen-form-download:hover {
+    cursor: pointer;
+}
+
 .led-screen-form-download a {
     text-decoration: none;
     color: white;
