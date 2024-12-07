@@ -1,10 +1,12 @@
 import './App.css'
+import Header from './Header/Header'
+import FormContainer from './FormContainer/FormContainer'
 
 function App() {
-
   return (
     <>
-      LED Screen Installation Form
+      <Header/>
+      <FormContainer/>
     </>
   )
 }
