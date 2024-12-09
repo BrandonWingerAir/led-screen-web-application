@@ -3,4 +3,5 @@
     grid-template-columns: 3fr 1fr;
     column-gap: calc(var(--led_screen_app_padding) / 1.25);
     padding: calc(var(--led_screen_app_padding) / 1.5) var(--led_screen_app_padding);
+    height: calc(100vh - 65px - (var(--led_screen_app_padding) * 1.5));
 }
