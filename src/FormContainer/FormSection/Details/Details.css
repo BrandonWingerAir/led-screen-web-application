@@ -1,0 +1,8 @@
+.led-screen-details-section {
+    position: relative;
+}
+
+.led-screen-flex-bottom {
+    position: absolute;
+    bottom: 0;
+}
