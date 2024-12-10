@@ -6,3 +6,12 @@
 .led-screen-form-configuration label {
     display: block;
 }
+
+.led-screen-form-configuration label {
+    color: #616161;
+    margin: 9px 0;
+}
+
+.led-screen-form-configuration select {
+    width: 100%;
+}

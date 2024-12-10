@@ -2,7 +2,7 @@ function Notes() {
 
     return (
       <>
-        <p>Notes</p>
+        <h2>Notes</h2>
       </>
     )
   }

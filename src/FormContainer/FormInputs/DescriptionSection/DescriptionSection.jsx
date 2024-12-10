@@ -4,7 +4,7 @@ function DescriptionSection() {
 
     return (
       <div className="led-screen-form-desc">
-        <p>Description</p>
+        <h3>Description</h3>
       </div>
     )
   }

@@ -11,9 +11,6 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
   let mountWidth = state.selectedMount.Width;
   let mountHeight = state.selectedMount.Height;
 
-  let clearanceWidth = parseInt(width) + state.selectedMount.Clearance;
-  let clearanceHeight = parseInt(height) + state.selectedMount.Clearance;
-
   let outerNiche = 1.5;
 
   let canvasWidth = window.innerWidth / 2;
@@ -106,7 +103,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
           y={centerHeight - height / 4 - 28}
           width={60}
           height={40}
-          fill="gray"
+          fill="#f5f5f5"
           stroke="black"
           strokeWidth={1}
         />
@@ -124,7 +121,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
           y={centerHeight + height * 0.5 - 50}
           width={60}
           height={40}
-          fill="gray"
+          fill="#f5f5f5"
           stroke="black"
           strokeWidth={1}
         />
