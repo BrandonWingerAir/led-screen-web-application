@@ -102,7 +102,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
 
         {/* Screen Width (Position: Top Center) */}
         <Rect
-          x={centerWidth + width / 2 - 28} 
+          x={centerWidth + width * 0.5 - 72} 
           y={centerHeight - height / 4 - 28}
           width={60}
           height={40}
@@ -111,8 +111,8 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
           strokeWidth={1}
         />
         <Text 
-          x={centerWidth + width / 2 - 18} 
-          y={centerHeight - height / 4 - 15}
+          x={centerWidth + width * 0.5 - 63} 
+          y={centerHeight - height * 0.25 - 15}
           text={`${state.selectedScreen.Width}` + `"`} 
           fontSize={14} 
           fill="black" 
@@ -121,7 +121,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
         {/* Screen Height (Position: Right Center) */}
         <Rect
           x={centerWidth + width * 1.1} 
-          y={centerHeight + height / 2 - 50}
+          y={centerHeight + height * 0.5 - 50}
           width={60}
           height={40}
           fill="gray"
@@ -136,7 +136,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
           fill="black" 
         />
 
-        {/* Dotted Center Line */}
+        {/* Dotted Horizontal Line */}
         <Line 
           points={[
             centerClearanceWidth * 0.55, 
@@ -149,9 +149,22 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
           dash={[4, 2]} 
         />
 
+        {/* Dotted Vertical Line */}
+        <Line 
+          points={[
+            canvasWidth / 2, 
+            centerClearanceHeight * 0.55, 
+            canvasWidth / 2,
+            centerClearanceHeight * 2.5
+          ]} 
+          stroke="black" 
+          strokeWidth={1} 
+          dash={[4, 2]} 
+        />
+
         {/* Vertical Floor Line */}
         <Arrow 
-          points={[centerClearanceWidth * 0.6, centerHeight + height / 2 + 20, centerClearanceWidth * 0.6, floorLine]} 
+          points={[centerClearanceWidth * 0.65, centerHeight + height / 2 + 20, centerClearanceWidth * 0.65, floorLine]} 
           stroke="black" 
           strokeWidth={1} 
           pointerLength={5} 
@@ -159,18 +172,17 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
           fill="black" 
         />
         <Text 
-          x={centerWidth / 20} 
+          x={centerClearanceWidth * 0.2} 
           y={centerHeight + height / 1.33}
           text={`Center Line`}
           fontSize={12} 
           fill="black" 
         />
 
-
         {/* Horizontal Floor Line */}
         <Line 
           points={[
-            centerClearanceWidth * 0.6, 
+            centerClearanceWidth * 0.65, 
             floorLine + 14,
             width * 1.85, 
             floorLine + 14
