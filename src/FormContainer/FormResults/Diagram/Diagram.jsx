@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import DataContext from '../../../DataContext.jsx';
-import { Stage, Layer, Rect, Text } from 'react-konva';
+import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
   
   const Diagram = () => {
   const { state } = useContext(DataContext);
@@ -15,18 +15,25 @@ import { Stage, Layer, Rect, Text } from 'react-konva';
   let clearanceHeight = parseInt(height) + state.selectedMount.Clearance;
 
   let canvasWidth = window.innerWidth / 2;
-  let canvasHeight = window.innerHeight - 250;
+  let canvasHeight = window.innerHeight - 180;
+
+  let floorLine = 50 * 9;
 
   switch (true) {
     case width > 500:
-      width /= 1.85; height /= 1.85;
-      mountWidth /= 1.85; mountHeight /= 1.85;
-      clearanceWidth /= 1.85; clearanceHeight /= 1.85;
+      width *= .4; height *= .4;
+      mountWidth *= .4; mountHeight *= .4;
+      clearanceWidth *= .4; clearanceHeight *= .4;
       break;
     case width > 100:
-      width /= 2; height /= 2;
-      mountWidth /= 2; mountHeight /= 2;
-      clearanceWidth /= 2; clearanceHeight /= 2;
+      width *= 2; height *= 2;
+      mountWidth *= 2; mountHeight *= 2;
+      clearanceWidth *= 2; clearanceHeight *= 2;
+      break;
+    case width > 80:
+      width *= 3; height *= 3;
+      mountWidth *= 3; mountHeight *= 3;
+      clearanceWidth *= 3; clearanceHeight *= 3;
       break;
     case width > 50:
       width *= 4; height *= 4;
@@ -43,6 +50,9 @@ import { Stage, Layer, Rect, Text } from 'react-konva';
       mountWidth *= 25; mountHeight *= 25;
       clearanceWidth *= 25; clearanceHeight *= 25;
   }  
+
+  console.log(floorLine);
+  
 
   let centerWidth = (canvasWidth - width) / 2;
   let centerHeight = (canvasHeight - height) / 2;
@@ -78,7 +88,6 @@ import { Stage, Layer, Rect, Text } from 'react-konva';
           strokeWidth={2}
         />
 
-
         {/* Mount Rectangle */}
         <Rect
           x={centerMountWidth}
@@ -112,7 +121,7 @@ import { Stage, Layer, Rect, Text } from 'react-konva';
         {/* Screen Height (Position: Right Center) */}
         <Rect
           x={centerWidth + width * 1.1} 
-          y={centerHeight + height / 2 - 25}
+          y={centerHeight + height / 2 - 50}
           width={60}
           height={40}
           fill="gray"
@@ -121,10 +130,53 @@ import { Stage, Layer, Rect, Text } from 'react-konva';
         />
         <Text 
           x={centerWidth + width * 1.1 + 10} 
-          y={centerHeight + height / 2 - 11}
+          y={centerHeight + height / 2 - 36}
           text={`${state.selectedScreen.Height}` + `"`} 
           fontSize={14} 
           fill="black" 
+        />
+
+        {/* Dotted Center Line */}
+        <Line 
+          points={[
+            centerClearanceWidth * 0.55, 
+            centerHeight + height / 2, 
+            centerClearanceWidth * 2.5,
+            centerHeight + height / 2
+          ]} 
+          stroke="black" 
+          strokeWidth={1} 
+          dash={[4, 2]} 
+        />
+
+        {/* Vertical Floor Line */}
+        <Arrow 
+          points={[centerClearanceWidth * 0.6, centerHeight + height / 2 + 20, centerClearanceWidth * 0.6, floorLine]} 
+          stroke="black" 
+          strokeWidth={1} 
+          pointerLength={5} 
+          pointerWidth={5} 
+          fill="black" 
+        />
+        <Text 
+          x={centerWidth / 20} 
+          y={centerHeight + height / 1.33}
+          text={`Center Line`}
+          fontSize={12} 
+          fill="black" 
+        />
+
+
+        {/* Horizontal Floor Line */}
+        <Line 
+          points={[
+            centerClearanceWidth * 0.6, 
+            floorLine + 14,
+            width * 1.85, 
+            floorLine + 14
+          ]} 
+          stroke="black" 
+          strokeWidth={1} 
         />
       </Layer>
     </Stage>
