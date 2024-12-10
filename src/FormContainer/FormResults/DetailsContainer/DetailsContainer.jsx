@@ -1,9 +1,9 @@
 import Dimensions from "./Dimensions/Dimensions"
 import Notes from "./Notes/Notes"
 import Information from "./Information/Information"
-import "./Details.css"
+import "./DetailsContainer.css"
 
-function Details() {
+function DetailsContainer() {
   return (
     <div className="led-screen-details-section">
       <Dimensions/>
@@ -15,5 +15,5 @@ function Details() {
   )
 }
 
-export default Details
+export default DetailsContainer
   

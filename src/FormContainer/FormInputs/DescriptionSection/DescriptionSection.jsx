@@ -1,6 +1,6 @@
-import "./Description.css"
+import "./DescriptionSection.css"
 
-function Description() {
+function DescriptionSection() {
 
     return (
       <div className="led-screen-form-desc">
@@ -9,5 +9,5 @@ function Description() {
     )
   }
   
-  export default Description
+  export default DescriptionSection
   

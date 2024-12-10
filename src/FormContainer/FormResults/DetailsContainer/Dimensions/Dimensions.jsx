@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import DataContext from './../../../../DataContext.jsx';
+import DataContext from '../../../../DataContext.jsx';
 
 function Dimensions() {
   const { state } = useContext(DataContext);

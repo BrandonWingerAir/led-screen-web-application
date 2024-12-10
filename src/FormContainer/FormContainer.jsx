@@ -1,12 +1,12 @@
 import "./FormContainer.css" 
-import FormSection from "./FormSection/FormSection"
+import FormResults from "./FormResults/FormResults"
 import FormInputs from "./FormInputs/FormInputs"
 
 function Form() {
 
     return (
       <div className="led-screen-form-container">
-            <FormSection/>
+            <FormResults/>
             <FormInputs/>
       </div>
     )

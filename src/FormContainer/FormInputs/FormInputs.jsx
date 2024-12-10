@@ -1,13 +1,13 @@
-import Configuration from "./Configuration/Configuration"
-import Description from "./Description/Description"
+import ConfigurationSection from "./ConfigurationSection/ConfigurationSection"
+import DescriptionSection from "./DescriptionSection/DescriptionSection"
 import DownloadBtn from "./DownloadBtn/DownloadBtn"
 
 function FormInputs() {
 
     return (
       <div>
-        <Configuration/>
-        <Description/>
+        <ConfigurationSection/>
+        <DescriptionSection/>
         <DownloadBtn/>
       </div>
     )
