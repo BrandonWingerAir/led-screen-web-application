@@ -14,45 +14,48 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
   let clearanceWidth = parseInt(width) + state.selectedMount.Clearance;
   let clearanceHeight = parseInt(height) + state.selectedMount.Clearance;
 
+  let outerNiche = 1.5;
+
   let canvasWidth = window.innerWidth / 2;
   let canvasHeight = window.innerHeight - 180;
 
   let floorLine = 50 * 9;
 
+  if (width > 55) {
+    outerNiche = 2;
+  }
+
   switch (true) {
     case width > 500:
       width *= .4; height *= .4;
       mountWidth *= .4; mountHeight *= .4;
-      clearanceWidth *= .4; clearanceHeight *= .4;
+      outerNiche *= .4;
       break;
     case width > 100:
       width *= 2; height *= 2;
       mountWidth *= 2; mountHeight *= 2;
-      clearanceWidth *= 2; clearanceHeight *= 2;
+      outerNiche *= 2;
       break;
     case width > 80:
       width *= 3; height *= 3;
       mountWidth *= 3; mountHeight *= 3;
-      clearanceWidth *= 3; clearanceHeight *= 3;
+      outerNiche *= 3;
       break;
     case width > 50:
       width *= 4; height *= 4;
       mountWidth *= 4; mountHeight *= 4;
-      clearanceWidth *= 4; clearanceHeight *= 4;
+      outerNiche *= 4;
       break;
     case width > 20:
       width *= 6; height *= 6;
       mountWidth *= 6; mountHeight *= 6;
-      clearanceWidth *= 6; clearanceHeight *= 6;
+      outerNiche *= 6;
       break;
     default:
       width *= 25; height *= 25;
       mountWidth *= 25; mountHeight *= 25;
-      clearanceWidth *= 25; clearanceHeight *= 25;
+      outerNiche *= 25;
   }  
-
-  console.log(floorLine);
-  
 
   let centerWidth = (canvasWidth - width) / 2;
   let centerHeight = (canvasHeight - height) / 2;
@@ -60,18 +63,15 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
   let centerMountWidth = (canvasWidth - mountWidth) / 2;
   let centerMountHeight = (canvasHeight - mountHeight) / 2;
 
-  let centerClearanceWidth = (canvasWidth - clearanceWidth) / 2;
-  let centerClearanceHeight = (canvasHeight - clearanceHeight) / 2;
-
   return (
     <Stage width={canvasWidth} height={canvasHeight}>
       <Layer>
-        {/* Clearance Rectangle */}
+        {/* Niche Rectangle */}
         <Rect
-          x={ centerClearanceWidth }
-          y={ centerClearanceHeight }
-          width={ clearanceWidth }
-          height={ clearanceHeight }
+          x={ centerWidth - outerNiche / 2}
+          y={ centerHeight - outerNiche / 2 }
+          width={ width + outerNiche }
+          height={ height + outerNiche }
           fill="transparent"
           stroke="black"
           strokeWidth={1}
@@ -164,7 +164,12 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
 
         {/* Vertical Floor Line */}
         <Arrow 
-          points={[centerClearanceWidth * 0.65, centerHeight + height / 2 + 20, centerClearanceWidth * 0.65, floorLine]} 
+          points={[
+            width * 0.5 + outerNiche, 
+            centerHeight + height / 2 + 20, 
+            width * 0.5 + outerNiche, 
+            floorLine
+          ]} 
           stroke="black" 
           strokeWidth={1} 
           pointerLength={5} 
@@ -172,7 +177,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
           fill="black" 
         />
         <Text 
-          x={centerClearanceWidth * 0.2} 
+          x={width * 0.2} 
           y={centerHeight + height / 1.33}
           text={`Center Line`}
           fontSize={12} 
@@ -182,7 +187,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
         {/* Horizontal Floor Line */}
         <Line 
           points={[
-            centerClearanceWidth * 0.65, 
+            width * 0.5 + outerNiche, 
             floorLine + 14,
             width * 1.85, 
             floorLine + 14
