@@ -139,9 +139,9 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
         {/* Dotted Horizontal Line */}
         <Line 
           points={[
-            centerClearanceWidth * 0.55, 
+            canvasWidth / 7.5, 
             centerHeight + height / 2, 
-            centerClearanceWidth * 2.5,
+            canvasWidth / 1.75 * 1.5,
             centerHeight + height / 2
           ]} 
           stroke="black" 
@@ -153,9 +153,9 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
         <Line 
           points={[
             canvasWidth / 2, 
-            centerClearanceHeight * 0.55, 
+            canvasHeight / 15, 
             canvasWidth / 2,
-            centerClearanceHeight * 2.5
+            canvasHeight / 1.6 * 1.5
           ]} 
           stroke="black" 
           strokeWidth={1} 
