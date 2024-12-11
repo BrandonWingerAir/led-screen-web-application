@@ -4,8 +4,7 @@ import DataContext from '../../../../DataContext.jsx';
 function Information() {
   const { state } = useContext(DataContext);
 
-  console.log(state.selectedScreen);
-  
+  // console.log(state.selectedScreen);
 
   return (
     <>

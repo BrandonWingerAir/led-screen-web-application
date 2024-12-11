@@ -1,6 +1,5 @@
 import { useContext } from 'react';
-import DataContext from '../../../../DataContext.jsx';
-import "./ScreenDimensions.css";
+import DataContext from '../../../../../DataContext.jsx';
 
 function ScreenDimensions() {
   const { state } = useContext(DataContext);

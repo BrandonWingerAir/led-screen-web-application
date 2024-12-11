@@ -1,5 +1,6 @@
 .led-screen-details-section {
     position: relative;
+    margin-left: var(--led_screen_app_padding);
 }
 
 .led-screen-flex-bottom {

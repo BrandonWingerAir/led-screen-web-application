@@ -1,3 +1,9 @@
+.led-screens-dimension-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: calc(var(--led_screen_app_padding) / 2);
+}
+
 .led-screens-result-dimensions {
     padding: 15px;
     border: 1px solid #000;
@@ -10,7 +16,7 @@
 }
 
 .led-screens-dimension-grid p {
-    padding: 7px 0;
+    padding: 0.6vw 2vw;
     border: 1px solid #000;
     margin: 6px 0;
 }

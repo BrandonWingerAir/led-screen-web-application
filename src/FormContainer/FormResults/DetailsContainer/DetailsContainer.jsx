@@ -1,4 +1,4 @@
-import ScreenDimensions from "./ScreenDimensions/ScreenDimensions"
+import DimensionBoxes from "./DimensionBoxes/DimensionBoxes"
 import Notes from "./Notes/Notes"
 import Information from "./Information/Information"
 import "./DetailsContainer.css"
@@ -6,7 +6,7 @@ import "./DetailsContainer.css"
 function DetailsContainer() {
   return (
     <div className="led-screen-details-section">
-      <ScreenDimensions/>
+      <DimensionBoxes/>
       <div className="led-screen-flex-bottom">
         <Notes/>
         <Information/>
