@@ -4,8 +4,10 @@ import DataContext from '../../../../../DataContext.jsx';
 function NicheDimensions() {
   const { state } = useContext(DataContext);
 
-  const nicheHeight = parseInt(state.selectedScreen.Height) + state.nicheGap;
-  const nicheWidth = parseInt(state.selectedScreen.Width) + state.nicheGap;
+  const nicheHeight = parseFloat(state.selectedScreen.Height) + parseFloat(state.nicheGap);
+  const nicheWidth = parseFloat(state.selectedScreen.Width) + parseFloat(state.nicheGap);
+  console.log(nicheHeight);
+  
   
   return (
     <div className='led-screens-result-dimensions'>
