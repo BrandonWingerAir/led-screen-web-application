@@ -1,6 +1,6 @@
 [
     {
-        "Screen MFR": "LH43QMBTBGCXZA",
+        "MFR": "LH43QMBTBGCXZA",
         "Make": "Samsung",
         "Screen Size": "43",
         "Height": "23.01",
@@ -9,7 +9,7 @@
         "Weight (LBS)": "31.97"
     },
     {
-        "Screen MFR": "10BDL4151T",
+        "MFR": "10BDL4151T",
         "Make": "Philips",
         "Screen Size": "10",
         "Height": "6.58",
@@ -18,7 +18,7 @@
         "Weight (LBS)": "1.57"
     },
     {
-        "Screen MFR": "LH55WMRWBGCXZA",
+        "MFR": "LH55WMRWBGCXZA",
         "Make": "Samsung",
         "Screen Size": "55",
         "Height": "31.7",
@@ -27,7 +27,7 @@
         "Weight (LBS)": "63.71"
     },
     {
-        "Screen MFR": "LH55QMBTBGCXZA",
+        "MFR": "LH55QMBTBGCXZA",
         "Make": "Samsung",
         "Screen Size": "55",
         "Height": "28.92",
@@ -36,7 +36,7 @@
         "Weight (LBS)": "59.3"
     },
     {
-        "Screen MFR": "BH65T",
+        "MFR": "BH65T",
         "Make": "Samsung",
         "Screen Size": "65",
         "Height": "33.51",
@@ -45,7 +45,7 @@
         "Weight (LBS)": "81.8"
     },
     {
-        "Screen MFR": "43TNF5J",
+        "MFR": "43TNF5J",
         "Make": "LG",
         "Screen Size": "43",
         "Height": "22.01",
@@ -54,7 +54,7 @@
         "Weight (LBS)": ""
     },
     {
-        "Screen MFR": "75UH5J-H",
+        "MFR": "75UH5J-H",
         "Make": "LG",
         "Screen Size": "75",
         "Height": "37.81",
@@ -63,7 +63,7 @@
         "Weight (LBS)": "51.2"
     },
     {
-        "Screen MFR": "43HT3WJ-B",
+        "MFR": "43HT3WJ-B",
         "Make": "LG",
         "Screen Size": "43",
         "Height": "23.85",
@@ -72,7 +72,7 @@
         "Weight (LBS)": ""
     },
     {
-        "Screen MFR": "55TNF5J",
+        "MFR": "55TNF5J",
         "Make": "LG",
         "Screen Size": "55",
         "Height": "28",
@@ -81,7 +81,7 @@
         "Weight (LBS)": "16.8"
     },
     {
-        "Screen MFR": "55CT5WJ",
+        "MFR": "55CT5WJ",
         "Make": "LG",
         "Screen Size": "55",
         "Height": "30.3",
@@ -90,7 +90,7 @@
         "Weight (LBS)": "57.32"
     },
     {
-        "Screen MFR": "98UM5J-B",
+        "MFR": "98UM5J-B",
         "Make": "LG",
         "Screen Size": "98",
         "Height": "49.33",
@@ -99,7 +99,7 @@
         "Weight (LBS)": "78"
     },
     {
-        "Screen MFR": "110UM5J-B",
+        "MFR": "110UM5J-B",
         "Make": "LG",
         "Screen Size": "110",
         "Height": "55.43",
@@ -108,7 +108,7 @@
         "Weight (LBS)": "242.51"
     },
     {
-        "Screen MFR": "98UM5K",
+        "MFR": "98UM5K",
         "Make": "LG",
         "Screen Size": "98",
         "Height": "49.3",
@@ -117,7 +117,7 @@
         "Weight (LBS)": "78"
     },
     {
-        "Screen MFR": "65UH5J-H",
+        "MFR": "65UH5J-H",
         "Make": "LG",
         "Screen Size": "65",
         "Height": "33.23",
@@ -126,7 +126,7 @@
         "Weight (LBS)": "28.2"
     },
     {
-        "Screen MFR": "75UH5J-H",
+        "MFR": "75UH5J-H",
         "Make": "LG",
         "Screen Size": "75",
         "Height": "37.81",
@@ -135,7 +135,7 @@
         "Weight (LBS)": "41.5"
     },
     {
-        "Screen MFR": "75UH5J-M",
+        "MFR": "75UH5J-M",
         "Make": "LG",
         "Screen Size": "75",
         "Height": "37.81",
@@ -144,7 +144,7 @@
         "Weight (LBS)": "41.5"
     },
     {
-        "Screen MFR": "86UH5J-H",
+        "MFR": "86UH5J-H",
         "Make": "LG",
         "Screen Size": "86",
         "Height": "43.19",
@@ -153,7 +153,7 @@
         "Weight (LBS)": "49"
     },
     {
-        "Screen MFR": "98UH5J-H",
+        "MFR": "98UH5J-H",
         "Make": "LG",
         "Screen Size": "98",
         "Height": "49.09",
@@ -162,7 +162,7 @@
         "Weight (LBS)": "81.1"
     },
     {
-        "Screen MFR": "65BDL3652T/00",
+        "MFR": "65BDL3652T/00",
         "Make": "Philips",
         "Screen Size": "65",
         "Height": "34.23",
@@ -171,7 +171,7 @@
         "Weight (LBS)": ""
     },
     {
-        "Screen MFR": "86BDL3652T/00",
+        "MFR": "86BDL3652T/00",
         "Make": "Philips",
         "Screen Size": "86",
         "Height": "44.58",
@@ -180,7 +180,7 @@
         "Weight (LBS)": "163.8"
     },
     {
-        "Screen MFR": "86BDL4152T/00",
+        "MFR": "86BDL4152T/00",
         "Make": "Philips",
         "Screen Size": "86",
         "Height": "44.4",
@@ -189,7 +189,7 @@
         "Weight (LBS)": "212.1"
     },
     {
-        "Screen MFR": "55BDL3452T/00",
+        "MFR": "55BDL3452T/00",
         "Make": "Philips",
         "Screen Size": "55",
         "Height": "29.27",
@@ -198,7 +198,7 @@
         "Weight (LBS)": ""
     },
     {
-        "Screen MFR": "75BDL3652T/00",
+        "MFR": "75BDL3652T/00",
         "Make": "Philips",
         "Screen Size": "75",
         "Height": "39.12",
@@ -207,7 +207,7 @@
         "Weight (LBS)": "116.85"
     },
     {
-        "Screen MFR": "TH-50CQ1U",
+        "MFR": "TH-50CQ1U",
         "Make": "Panasonic",
         "Screen Size": "50",
         "Height": "25.7",
@@ -216,7 +216,7 @@
         "Weight (LBS)": "37.5"
     },
     {
-        "Screen MFR": "E914767",
+        "MFR": "E914767",
         "Make": "Elo",
         "Screen Size": "65",
         "Height": "34.08",
@@ -225,7 +225,7 @@
         "Weight (LBS)": "111.14"
     },
     {
-        "Screen MFR": "E666224",
+        "MFR": "E666224",
         "Make": "Elo",
         "Screen Size": "50",
         "Height": "26.88",
@@ -234,7 +234,7 @@
         "Weight (LBS)": "31.68"
     },
     {
-        "Screen MFR": "M1-650DS-A1",
+        "MFR": "M1-650DS-A1",
         "Make": "MicroTouch",
         "Screen Size": "65",
         "Height": "33.77",
@@ -243,7 +243,7 @@
         "Weight (LBS)": "112.88"
     },
     {
-        "Screen MFR": "URP65-T",
+        "MFR": "URP65-T",
         "Make": "Planar",
         "Screen Size": "65",
         "Height": "33.8",
@@ -252,7 +252,7 @@
         "Weight (LBS)": "110.2"
     },
     {
-        "Screen MFR": "URP98-ERO-T",
+        "MFR": "URP98-ERO-T",
         "Make": "Planar",
         "Screen Size": "98",
         "Height": "50.3",
@@ -261,7 +261,7 @@
         "Weight (LBS)": "278"
     },
     {
-        "Screen MFR": "TM-65-FX",
+        "MFR": "TM-65-FX",
         "Make": "Team Board",
         "Screen Size": "65",
         "Height": "33.6",
@@ -270,7 +270,7 @@
         "Weight (LBS)": ""
     },
     {
-        "Screen MFR": "LSCB018-RK-163",
+        "MFR": "LSCB018-RK-163",
         "Make": "LG",
         "Screen Size": "163",
         "Height": "79.75",
@@ -279,7 +279,7 @@
         "Weight (LBS)": ""
     },
     {
-        "Screen MFR": "32TNF5J-B",
+        "MFR": "32TNF5J-B",
         "Make": "LG",
         "Screen Size": "32",
         "Height": "419.4",
@@ -288,7 +288,7 @@
         "Weight (LBS)": "5.6"
     },
     {
-        "Screen MFR": "49XS4J-B",
+        "MFR": "49XS4J-B",
         "Make": "LG",
         "Screen Size": "49",
         "Height": "24.66",
@@ -297,7 +297,7 @@
         "Weight (LBS)": "45.9"
     },
     {
-        "Screen MFR": "55XS4J-B",
+        "MFR": "55XS4J-B",
         "Make": "LG",
         "Screen Size": "55",
         "Height": "27.93",
@@ -306,7 +306,7 @@
         "Weight (LBS)": "57.32"
     },
     {
-        "Screen MFR": "49XE4F-M",
+        "MFR": "49XE4F-M",
         "Make": "LG",
         "Screen Size": "49",
         "Height": "25.8",
@@ -315,7 +315,7 @@
         "Weight (LBS)": "70.5"
     },
     {
-        "Screen MFR": "TD3207",
+        "MFR": "TD3207",
         "Make": "Viewsonic",
         "Screen Size": "32",
         "Height": "17.76",

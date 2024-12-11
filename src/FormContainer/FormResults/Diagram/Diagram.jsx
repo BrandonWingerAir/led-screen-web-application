@@ -214,7 +214,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
           points={[
             width * 0.56, 
             floorLine + 14,
-            width * 2.3, 
+            width * 2, 
             floorLine + 14
           ]} 
           stroke="black" 
