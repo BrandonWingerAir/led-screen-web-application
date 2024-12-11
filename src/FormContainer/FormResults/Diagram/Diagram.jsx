@@ -16,7 +16,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
   let canvasWidth = window.innerWidth / 2;
   let canvasHeight = window.innerHeight - 180;
 
-  let floorLine = 50 * 9;
+  let floorLine = state.floorLine * 9;
 
   if (width > 55) {
     outerNiche = 2;
@@ -52,7 +52,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
       width *= 25; height *= 25;
       mountWidth *= 25; mountHeight *= 25;
       outerNiche *= 25;
-  }  
+  }
 
   let centerWidth = (canvasWidth - width) / 2;
   let centerHeight = (canvasHeight - height) / 2;
@@ -159,6 +159,37 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
           dash={[4, 2]} 
         />
 
+        <Rect
+          x={width * 0.2} 
+          y={height * 2.25 - 55}
+          width={60}
+          height={40}
+          fill="#f5f5f5"
+          stroke="black"
+          strokeWidth={1}
+        />
+        <Text 
+          x={width * 0.2 + 20} 
+          y={height * 2.25 - 40}
+          text={state.floorLine + `"`}
+          fontSize={12} 
+          fill="black" 
+        />
+        <Text 
+          x={width * 0.2 - 5} 
+          y={height * 2.25}
+          text={`Centerline of`}
+          fontSize={12} 
+          fill="black" 
+        />
+        <Text 
+          x={width * 0.2 + 10} 
+          y={height * 2.25 + 18}
+          text={`Display`}
+          fontSize={12} 
+          fill="black" 
+        />
+
         {/* Vertical Floor Line */}
         <Arrow 
           points={[
@@ -171,13 +202,6 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
           strokeWidth={1} 
           pointerLength={5} 
           pointerWidth={5} 
-          fill="black" 
-        />
-        <Text 
-          x={width * 0.2} 
-          y={centerHeight + height / 1.33}
-          text={`Center Line`}
-          fontSize={12} 
           fill="black" 
         />
 

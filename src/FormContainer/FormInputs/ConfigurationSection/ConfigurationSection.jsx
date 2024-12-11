@@ -1,6 +1,7 @@
 import "./ConfigurationSection.css"
 import SelectScreen from './SelectScreen/SelectScreen';
 import SelectMount from './SelectMount/SelectMount';
+import FloorLineTextBox from "./FloorLineTextBox/FloorLineTextBox";
 
 function ConfigurationSection() {
 
@@ -9,6 +10,7 @@ function ConfigurationSection() {
         <h3>Configuration</h3>
         <SelectScreen/>
         <SelectMount/>
+        <FloorLineTextBox/>
       </div>
     )
   }
