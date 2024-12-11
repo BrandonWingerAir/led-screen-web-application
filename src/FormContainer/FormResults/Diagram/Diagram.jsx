@@ -11,7 +11,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
   let mountWidth = state.selectedMount.Width;
   let mountHeight = state.selectedMount.Height;
 
-  let outerNiche = 1.5;
+  let outerNiche = state.nicheGap;
 
   let canvasWidth = window.innerWidth / 2;
   let canvasHeight = window.innerHeight - 180;
@@ -20,6 +20,8 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
 
   if (state.wallType == 'flatWall') {
     outerNiche = 0;
+  } else if (outerNiche !== 1.5 || 2) {
+    outerNiche = state.nicheGap;
   } else if (width > 55) {
     outerNiche = 2;
   }
