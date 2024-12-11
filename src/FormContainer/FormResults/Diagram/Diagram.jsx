@@ -14,7 +14,7 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
   let outerNiche = state.nicheGap;
 
   let canvasWidth = window.innerWidth / 2;
-  let canvasHeight = window.innerHeight - 180;
+  let canvasHeight = 500;
 
   let floorLine = state.floorLine * 9;
 
