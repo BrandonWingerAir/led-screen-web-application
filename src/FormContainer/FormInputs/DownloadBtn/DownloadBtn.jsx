@@ -1,13 +1,24 @@
-import "./DownloadBtn.css"
+import "./DownloadBtn.css";
+import { saveComponentsAsPdf } from './../../../pdfUtils';
 
 function DownloadBtn() {
+  const componentIds = [
+    'led-screens-diagram-canvas', 
+    'led-screens-dimension-boxes', 
+    'led-screens-config-notes', 
+    'led-screens-installation-desc'
+  ];
 
-    return (
-      <div className="led-screen-form-download">
-        <a href="#!">Download</a>
-      </div>
-    )
-  }
-  
-  export default DownloadBtn
+  return (
+    <div className="led-screen-form-download">
+      <button 
+        onClick={() => saveComponentsAsPdf(componentIds)}
+      >
+        Download
+      </button>
+    </div>
+  )
+}
+
+export default DownloadBtn
   

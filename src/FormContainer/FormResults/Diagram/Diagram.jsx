@@ -89,7 +89,10 @@ const Diagram = () => {
   let centerMountHeight = (canvasHeight - mountHeight) / 2;
 
   return (
-    <div className='led-screens-canvas-container'>
+    <div 
+      id='led-screens-diagram-canvas' 
+      className='led-screens-canvas-container'
+    >
       <Stage width={canvasWidth} height={canvasHeight}>
         <Layer>
           {/* Niche Rectangle */}
@@ -188,9 +191,10 @@ const Diagram = () => {
             dash={[4, 2]} 
           />
 
+          {/* Floor Line Distance (Position: Left Center) */}
           <Rect
-            x={monitorWidth * 0.2} 
-            y={monitorHeight * 2.25 - 55}
+            x={monitorWidth * 0.2 - 5} 
+            y={monitorHeight * 2.75}
             width={60}
             height={40}
             fill="#f5f5f5"
@@ -198,22 +202,22 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={monitorWidth * 0.2 + 20} 
-            y={monitorHeight * 2.25 - 40}
+            x={monitorWidth * 0.2 + 16} 
+            y={monitorHeight * 2.75 + 16}
             text={state.floorLine + `"`}
             fontSize={12} 
             fill="black" 
           />
           <Text 
-            x={monitorWidth * 0.2 - 5} 
-            y={monitorHeight * 2.25}
+            x={monitorWidth * 0.2 - 10} 
+            y={monitorHeight * 2.75 + 48}
             text={`Centerline of`}
             fontSize={12} 
             fill="black" 
           />
           <Text 
-            x={monitorWidth * 0.2 + 10} 
-            y={monitorHeight * 2.25 + 18}
+            x={monitorWidth * 0.2 + 5} 
+            y={monitorHeight * 2.75 + 64}
             text={`Display`}
             fontSize={12} 
             fill="black" 

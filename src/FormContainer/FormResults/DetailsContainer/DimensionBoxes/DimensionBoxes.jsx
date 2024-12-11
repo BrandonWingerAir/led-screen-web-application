@@ -8,7 +8,10 @@ function DimensionBoxes() {
   const { state } = useContext(DataContext);
   
     return (
-      <div className='led-screens-dimension-boxes'>
+      <div 
+        id='led-screens-dimension-boxes'
+        className='led-screens-dimension-boxes'
+      >
         <NicheDimensions/>
         <ScreenDimensions/>
       </div>
