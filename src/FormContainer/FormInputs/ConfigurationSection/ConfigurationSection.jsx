@@ -2,6 +2,7 @@ import "./ConfigurationSection.css"
 import SelectScreen from './SelectScreen/SelectScreen';
 import SelectMount from './SelectMount/SelectMount';
 import FloorLineTextBox from "./FloorLineTextBox/FloorLineTextBox";
+import NicheRadioBtn from "./NicheRadioBtn/NicheRadioBtn";
 
 function ConfigurationSection() {
 
@@ -11,6 +12,7 @@ function ConfigurationSection() {
         <SelectScreen/>
         <SelectMount/>
         <FloorLineTextBox/>
+        <NicheRadioBtn/>
       </div>
     )
   }

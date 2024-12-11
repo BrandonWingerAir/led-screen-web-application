@@ -18,7 +18,9 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
 
   let floorLine = state.floorLine * 9;
 
-  if (width > 55) {
+  if (state.wallType == 'flatWall') {
+    outerNiche = 0;
+  } else if (width > 55) {
     outerNiche = 2;
   }
 
@@ -193,9 +195,9 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
         {/* Vertical Floor Line */}
         <Arrow 
           points={[
-            width * 0.5 + outerNiche, 
+            width * 0.56, 
             centerHeight + height / 2 + 20, 
-            width * 0.5 + outerNiche, 
+            width * 0.56, 
             floorLine
           ]} 
           stroke="black" 
@@ -208,9 +210,9 @@ import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
         {/* Horizontal Floor Line */}
         <Line 
           points={[
-            width * 0.5 + outerNiche, 
+            width * 0.56, 
             floorLine + 14,
-            width * 1.85, 
+            width * 2.3, 
             floorLine + 14
           ]} 
           stroke="black" 

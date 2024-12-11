@@ -10,7 +10,8 @@ export const DataProvider = ({ children }) => {
     mounts: mountsData,
     selectedScreen: screenData[0],
     selectedMount: mountsData[0],
-    floorLine: 50
+    floorLine: 50,
+    wallType: 'Niche'
   });    
 
   const updateSelectedScreen = (newValue) => { 
@@ -20,7 +21,8 @@ export const DataProvider = ({ children }) => {
       mounts: mountsData, 
       selectedScreen: newScreen,
       selectedMount: state.selectedMount,
-      floorLine: state.floorLine
+      floorLine: state.floorLine,
+      wallType: state.wallType
     });
   };
 
@@ -31,7 +33,8 @@ export const DataProvider = ({ children }) => {
       mounts: mountsData, 
       selectedScreen: state.selectedScreen, 
       selectedMount: newMount,
-      floorLine: state.floorLine
+      floorLine: state.floorLine,
+      wallType: state.wallType
     });
   };
 
@@ -41,12 +44,26 @@ export const DataProvider = ({ children }) => {
       mounts: mountsData, 
       selectedScreen: state.selectedScreen, 
       selectedMount: state.selectedMount,
-      floorLine: newValue
+      floorLine: newValue,
+      wallType: state.wallType
+    });
+  }
+
+  const updateWallType = (newValue) => {
+    setState({ 
+      screens: screenData, 
+      mounts: mountsData, 
+      selectedScreen: state.selectedScreen, 
+      selectedMount: state.selectedMount,
+      floorLine: state.floorLine,
+      wallType: newValue
     });
   }
 
   return (
-    <DataContext.Provider value={{ state, updateSelectedScreen, updateSelectedMount, updateFloorLine }}>
+    <DataContext.Provider 
+      value={{ state, updateSelectedScreen, updateSelectedMount, updateFloorLine, updateWallType }}
+    >
       {children}
     </DataContext.Provider>
   );
