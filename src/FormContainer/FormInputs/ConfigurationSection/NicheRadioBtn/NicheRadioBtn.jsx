@@ -15,12 +15,12 @@ const NicheRadioBtn = () => {
       <label>Outer Gap</label>
       <form onChange={handleChange}>
         <div>
-            <input type="radio" name="led_screens_wall_type" value="niche" defaultChecked/>
-            <label for="niche">Niche</label>
+            <input type="radio" name="led_screens_wall_type" value="Niche" defaultChecked/>
+            <label htmlFor="niche">Niche</label>
         </div>
         <div>
             <input type="radio" name="led_screens_wall_type" value="flatWall"/>
-            <label for="flatWall">Flat Wall</label>
+            <label htmlFor="flatWall">Flat Wall</label>
         </div>
       </form>
     </div>

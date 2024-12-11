@@ -10,10 +10,16 @@ const NicheGapTextBox = () => {
   };
 
   return (
-    <div>
-      <label for="led_screen_niche_gap">Niche Distance (In.)</label>
-      <input type="text" onChange={handleChange} value={state.nicheGap}/> "
-    </div>
+    <>
+      {state.wallType == 'Niche' ? (
+      <div>
+        <label htmlFor="led_screen_niche_gap">Niche Distance (In.)</label>
+        <input type="text" onChange={handleChange} value={state.nicheGap}/> "
+      </div>
+      ) : (
+        <></>
+      )}
+    </>
   );
 };
 
