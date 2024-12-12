@@ -11,6 +11,7 @@ export const DataProvider = ({ children }) => {
     selectedScreen: screenData[0],
     selectedMount: mountsData[0],
     floorLine: 50,
+    orientation: 'horizontal',
     wallType: 'Niche',
     nicheGap: 1.5
   });    
@@ -23,6 +24,7 @@ export const DataProvider = ({ children }) => {
       selectedScreen: newScreen,
       selectedMount: state.selectedMount,
       floorLine: state.floorLine,
+      orientation: state.orientation,
       wallType: state.wallType,
       nicheGap: state.nicheGap
     });
@@ -37,6 +39,7 @@ export const DataProvider = ({ children }) => {
       selectedScreen: state.selectedScreen, 
       selectedMount: newMount,
       floorLine: state.floorLine,
+      orientation: state.orientation,
       wallType: state.wallType,
       nicheGap: state.nicheGap
     });
@@ -49,6 +52,7 @@ export const DataProvider = ({ children }) => {
       selectedScreen: state.selectedScreen, 
       selectedMount: state.selectedMount,
       floorLine: newValue,
+      orientation: state.orientation,
       wallType: state.wallType,
       nicheGap: state.nicheGap
     });
@@ -61,7 +65,21 @@ export const DataProvider = ({ children }) => {
       selectedScreen: state.selectedScreen, 
       selectedMount: state.selectedMount,
       floorLine: state.floorLine,
+      orientation: state.orientation,
       wallType: newValue,
+      nicheGap: state.nicheGap
+    });
+  }
+
+  const updateOrientation = (newValue) => {
+    setState({ 
+      screens: screenData, 
+      mounts: mountsData, 
+      selectedScreen: state.selectedScreen,
+      selectedMount: state.selectedMount,
+      floorLine: state.floorLine,
+      orientation: newValue,
+      wallType: state.wallType,
       nicheGap: state.nicheGap
     });
   }
@@ -73,6 +91,7 @@ export const DataProvider = ({ children }) => {
       selectedScreen: state.selectedScreen, 
       selectedMount: state.selectedMount,
       floorLine: state.floorLine,
+      orientation: state.orientation,
       wallType: state.wallType,
       nicheGap: newValue
     });
@@ -84,7 +103,8 @@ export const DataProvider = ({ children }) => {
         state, 
         updateSelectedScreen, 
         updateSelectedMount, 
-        updateFloorLine, 
+        updateFloorLine,
+        updateOrientation,
         updateWallType,
         updateNicheGap
       }}

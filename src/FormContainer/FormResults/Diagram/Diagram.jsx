@@ -31,6 +31,16 @@ const Diagram = () => {
     outerNiche = 2;
   }
 
+  // Reverse values for vertical orientation
+  if (state.orientation == 'horizontal') {
+    monitorWidth = state.selectedScreen.Width;
+    monitorHeight = state.selectedScreen.Height;
+  } else {
+    monitorWidth = state.selectedScreen.Height;
+    monitorHeight = state.selectedScreen.Width;
+  }
+
+  // Scale Selection
   const monitorScale1 = 0.4;
   const monitorScale2 = 2;
   const monitorScale3 = 3;
@@ -82,12 +92,14 @@ const Diagram = () => {
       outerNiche *= monitorScale6;
   }
 
+  // Monitor distance from center (Radius)
   let centerWidth = (canvasWidth - monitorWidth) / 2;
   let centerHeight = (canvasHeight - monitorHeight) / 2;
 
   let centerMountWidth = (canvasWidth - mountWidth) / 2;
   let centerMountHeight = (canvasHeight - mountHeight) / 2;
 
+  // Render Canvas
   return (
     <div 
       id='led-screens-diagram-canvas' 
@@ -142,7 +154,11 @@ const Diagram = () => {
           <Text 
             x={centerWidth + monitorWidth * 0.5 - 63} 
             y={centerHeight - monitorHeight * 0.25 - 15}
-            text={`${state.selectedScreen.Width}` + `"`} 
+            text={`${
+              state.orientation == 'horizontal' ? 
+                state.selectedScreen.Width 
+                : state.selectedScreen.Height
+              }` + `"`}
             fontSize={14} 
             fill="black" 
           />
@@ -160,7 +176,11 @@ const Diagram = () => {
           <Text 
             x={centerWidth + monitorWidth * 1.1 + 10} 
             y={centerHeight + monitorHeight / 2 - 36}
-            text={`${state.selectedScreen.Height}` + `"`} 
+            text={`${
+              state.orientation == 'horizontal' ? 
+                state.selectedScreen.Height 
+                : state.selectedScreen.Width
+              }` + `"`}
             fontSize={14} 
             fill="black" 
           />

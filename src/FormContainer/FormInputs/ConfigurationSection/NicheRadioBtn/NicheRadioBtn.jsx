@@ -12,7 +12,6 @@ const NicheRadioBtn = () => {
 
   return (
     <div className='led-screens-wall-type'>
-      <label>Outer Gap</label>
       <form onChange={handleChange}>
         <div>
             <input type="radio" name="led_screens_wall_type" value="Niche" defaultChecked/>

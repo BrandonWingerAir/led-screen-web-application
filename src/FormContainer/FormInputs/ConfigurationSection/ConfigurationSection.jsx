@@ -4,6 +4,7 @@ import SelectMount from './SelectMount/SelectMount';
 import FloorLineTextBox from "./FloorLineTextBox/FloorLineTextBox";
 import NicheRadioBtn from "./NicheRadioBtn/NicheRadioBtn";
 import NicheGapTextBox from "./NicheGapTextBox/NicheGapTextBox";
+import OrientationRadioBtn from "./OrientationRadioBtn/OrientationRadioBtn";
 
 function ConfigurationSection() {
 
@@ -13,6 +14,7 @@ function ConfigurationSection() {
         <SelectScreen/>
         <SelectMount/>
         <FloorLineTextBox/>
+        <OrientationRadioBtn/>
         <NicheRadioBtn/>
         <NicheGapTextBox/>
       </div>

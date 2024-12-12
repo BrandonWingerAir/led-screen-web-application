@@ -1,0 +1,16 @@
+.led-screens-wall-type form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.led-screens-wall-type div {
+    display: flex;
+}
+
+.led-screens-wall-type form label {
+    color: #000;
+    position: relative;
+    top: 2px;
+    left: 1px;
+}
