@@ -1,5 +1,5 @@
 import "./DownloadBtn.css";
-import { saveComponentsAsPdf } from './../../../pdfUtils';
+import { saveComponentsAsPdf } from './../../../pdfUtil';
 
 function DownloadBtn() {
   const componentIds = [
