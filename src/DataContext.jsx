@@ -36,7 +36,16 @@ export const DataProvider = ({ children }) => {
   ]);
 
   const updateTotalDepth = () => {
-    const totalDepth = parseFloat(state.selectedScreen.Depth) + parseFloat(state.selectedMediaPlayer.Depth);
+    const screenDepth = parseFloat(state.selectedScreen.Depth);
+    const mediaPlayerDepth = parseFloat(state.selectedMediaPlayer.Depth);
+    const mountDepth = parseFloat(state.selectedMount.Depth);
+
+    const backDepth = Math.max(mediaPlayerDepth, mountDepth);
+
+    console.log(state.selectedMount);
+    
+
+    const totalDepth = screenDepth + backDepth;
     totalDepth.toFixed(2);
 
     setState({ 

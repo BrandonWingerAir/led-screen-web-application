@@ -260,9 +260,9 @@ const Diagram = () => {
           {/* Vertical Floor Line */}
           <Arrow 
             points={[
-              floorLineX * 0.56, 
+              floorLineX * 0.55, 
               centerHeight + monitorHeight / 2 + 20, 
-              floorLineX * 0.56, 
+              floorLineX * 0.55, 
               floorLine
             ]} 
             stroke="black" 
@@ -275,7 +275,7 @@ const Diagram = () => {
           {/* Horizontal Floor Line */}
           <Line 
             points={[
-              floorLineX * 0.56, 
+              floorLineX * 0.55, 
               floorLine + 14,
               floorLineX * 2, 
               floorLine + 14
