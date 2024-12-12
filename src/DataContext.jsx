@@ -18,7 +18,6 @@ export const DataProvider = ({ children }) => {
     wallType: 'Niche',
     nicheGap: 1.5,
     totalDepth: 0,
-    nicheDepth: 0,
     drawer: ''
   });
 
@@ -32,7 +31,6 @@ export const DataProvider = ({ children }) => {
     state.orientation,
     state.wallType,
     state.nicheGap,
-    state.nicheDepth,
     state.drawer
   ]);
 
@@ -58,7 +56,6 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: totalDepth,
-      nicheDepth: state.nicheDepth,
       drawer: state.drawer
     });
   }
@@ -78,7 +75,6 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: state.totalDepth,
-      nicheDepth: state.nicheDepth,
       drawer: state.drawer
     });
   };
@@ -98,7 +94,6 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: state.depth,
-      nicheDepth: state.nicheDepth,
       drawer: state.drawer
     });
   };
@@ -118,7 +113,6 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: state.depth,
-      nicheDepth: state.nicheDepth,
       drawer: state.drawer
     });
   };
@@ -136,7 +130,6 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: state.depth,
-      nicheDepth: state.nicheDepth,
       drawer: state.drawer
     });
   }
@@ -154,7 +147,6 @@ export const DataProvider = ({ children }) => {
       wallType: newValue,
       nicheGap: state.nicheGap,
       totalDepth: state.depth,
-      nicheDepth: state.nicheDepth,
       drawer: state.drawer
     });
   }
@@ -172,7 +164,6 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: state.depth,
-      nicheDepth: state.nicheDepth,
       drawer: state.drawer
     });
   }
@@ -190,7 +181,6 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: newValue,
       depth: state.depth,
-      nicheDepth: state.nicheDepth,
       drawer: state.drawer
     });
   }
@@ -208,7 +198,6 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       depth: state.depth,
-      nicheDepth: state.nicheDepth,
       drawer: newValue
     });
   }

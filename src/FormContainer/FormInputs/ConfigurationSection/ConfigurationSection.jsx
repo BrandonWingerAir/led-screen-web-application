@@ -1,11 +1,11 @@
 import "./ConfigurationSection.css"
 import SelectScreen from './SelectScreen/SelectScreen';
-import SelectMount from './SelectMount/SelectMount';
-import FloorLineTextBox from "./FloorLineTextBox/FloorLineTextBox";
-import NicheRadioBtn from "./NicheRadioBtn/NicheRadioBtn";
-import NicheGapTextBox from "./NicheGapTextBox/NicheGapTextBox";
-import OrientationRadioBtn from "./OrientationRadioBtn/OrientationRadioBtn";
 import SelectMediaPlayer from "./SelectMediaPlayer/SelectMediaPlayer";
+import SelectMount from './SelectMount/SelectMount';
+import FloorLineInputBox from "./FloorLineInputBox/FloorLineInputBox";
+import NicheRadioBtn from "./NicheRadioBtn/NicheRadioBtn";
+import NicheGapInputBox from "./NicheGapInputBox/NicheGapInputBox";
+import OrientationRadioBtn from "./OrientationRadioBtn/OrientationRadioBtn";
 
 function ConfigurationSection() {
 
@@ -13,12 +13,12 @@ function ConfigurationSection() {
       <div className="led-screen-form-configuration">
         <h3>Configuration</h3>
         <SelectScreen/>
-        <SelectMount/>
         <SelectMediaPlayer/>
-        <FloorLineTextBox/>
+        <SelectMount/>
         <OrientationRadioBtn/>
         <NicheRadioBtn/>
-        <NicheGapTextBox/>
+        <FloorLineInputBox/>
+        <NicheGapInputBox/>
       </div>
     )
   }

@@ -1,0 +1,19 @@
+.led-screens-equipment-container {
+    display: none;
+    position: relative;
+    top: 100vh;
+}
+
+.led-screens-equipment-container h2 {
+    border-bottom: 1px solid #000;
+    padding-bottom: 7px;
+}
+
+.led-screens-equipment-container h5 {
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.led-screens-equipment-container p {
+    margin-bottom: 10px;
+}

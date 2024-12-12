@@ -7,3 +7,7 @@
     position: absolute;
     bottom: 0;
 }
+
+.led-screen-details-section > div > div{
+    padding: var(--led_screen_app_padding);
+}

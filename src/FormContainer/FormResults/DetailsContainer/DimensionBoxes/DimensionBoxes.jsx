@@ -1,16 +1,12 @@
-import { useContext } from 'react';
-import DataContext from '../../../../DataContext';
 import "./DimensionBoxes.css";
 import NicheDimensions from './NicheDimensions/NicheDimensions';
 import ScreenDimensions from "./ScreenDimensions/ScreenDimensions";
 
-function DimensionBoxes() {
-  const { state } = useContext(DataContext);
-  
+function DimensionBoxes() {  
     return (
       <div 
         id='led-screens-dimension-boxes'
-        className='led-screens-dimension-boxes'
+        className='led-screens-dimensions-container'
       >
         <NicheDimensions/>
         <ScreenDimensions/>

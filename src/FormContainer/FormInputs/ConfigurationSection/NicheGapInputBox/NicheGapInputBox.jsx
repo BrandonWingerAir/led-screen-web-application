@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import DataContext from '../../../../DataContext.jsx';
 
-const NicheGapTextBox = () => {
+const NicheGapInputBox = () => {
   const { state, updateNicheGap } = useContext(DataContext);
     
   const handleChange = (event) => {     
@@ -13,17 +13,17 @@ const NicheGapTextBox = () => {
     <>
       {state.wallType == 'Niche' ? (
         <div>
-          <label htmlFor="led_screen_niche_gap">Niche Distance (In.)</label>
-          <input type="text" onChange={handleChange} value={state.nicheGap}/> "
+          <label htmlFor="led_screen_niche_gap">Niche Depth Var</label>
+          <input type="number" onChange={handleChange} value={state.nicheGap}/>
         </div>
       ) : (
         <div>
-          <label htmlFor="led_screen_niche_gap">Niche Distance (In.)</label>
-          <input type="text" onChange={handleChange} value={state.nicheGap} disabled/> "
+          <label htmlFor="led_screen_niche_gap">Niche Depth Var</label>
+          <input type="number" onChange={handleChange} value={state.nicheGap} disabled/>
         </div>
       )}
     </>
   );
 };
 
-export default NicheGapTextBox;
+export default NicheGapInputBox;

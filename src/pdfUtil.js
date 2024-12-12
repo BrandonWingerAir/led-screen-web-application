@@ -8,11 +8,21 @@ export const saveComponentsAsPdf = async (components, padding = 100) => {
     const halfHeight = pdfHeight / 2;
 
     for (let i = 0; i < components.length; i++) { 
-        const element = document.getElementById(components[i]); 
+        const element = document.getElementById(components[i]);
         
         if (element) { 
+            // Set PDF component section to visible
+            if (components[i] === 'led-screens-equip-config') { 
+                element.style.display = 'block'; 
+            }
+
             const canvas = await html2canvas(element, { scale: 5 });
             const imgData = canvas.toDataURL('image/jpeg', 0.8);
+
+            // Revert PDF component section to invisible
+            if (components[i] === 'led-screens-equip-config') { 
+                element.style.display = 'none'; 
+            }
 
             const imgProps = pdf.getImageProperties(imgData);   
 
@@ -29,5 +39,5 @@ export const saveComponentsAsPdf = async (components, padding = 100) => {
         } 
     } 
     
-    pdf.save('document.pdf'); 
+    pdf.save('led_screen_installation_summary.pdf'); 
 };

@@ -1,6 +1,6 @@
 [
     {
-        "MFG. PART": "MPT-L65UA",
+        "MFG": "MPT-L65UA",
         "Brand": "Mustang",
         "Maximum Load (lbs)": "200",
         "VESA's": "75 x75,100 x 100,200 x 100,200 x 200,300 x 200,300 x 300,400 x 200,400 x 300,400 x 400,600 x 400,600 x 200",
@@ -10,7 +10,7 @@
         "Clearance": 4
     },
     {
-        "MFG. PART": "MPF-X106UA",
+        "MFG": "MPF-X106UA",
         "Brand": "Mustang",
         "Maximum Load (lbs)": "300",
         "VESA's": "75 x75,100 x 100,200 x 100,200 x 200,300 x 200,300 x 300,400 x 200,400 x 300,400 x 400,600 x 200,600 x 400,800 x 400,1096 x 601",
@@ -20,7 +20,7 @@
         "Clearance": 6
     },
     {
-        "MFG. PART": "MPF-L65UA",
+        "MFG": "MPF-L65UA",
         "Brand": "Mustang",
         "Maximum Load (lbs)": "200",
         "VESA's": "75 x75,100 x 100,200 x 100,200 x 200,300 x 200,300 x 300,400 x 200,400 x 300,400 x 400,600 x 200,600 x 400",
@@ -30,7 +30,7 @@
         "Clearance": 4
     },
     {
-        "MFG. PART": "MPF-X85UA",
+        "MFG": "MPF-X85UA",
         "Brand": "Mustang",
         "Maximum Load (lbs)": "200",
         "VESA's": "832 x 601",
@@ -40,7 +40,7 @@
         "Clearance": 4
     },
     {
-        "MFG. PART": "XSM1U",
+        "MFG": "XSM1U",
         "Brand": "Chief",
         "Maximum Load (lbs)": "250",
         "VESA's": "",
@@ -50,7 +50,7 @@
         "Clearance": 6
     },
     {
-        "MFG. PART": "STS650",
+        "MFG": "STS650",
         "Brand": "Peerless",
         "Maximum Load (lbs)": "200",
         "VESA's": "400 x 400,600 x 400,600 x 600",
@@ -60,7 +60,7 @@
         "Clearance": 1
     },
     {
-        "MFG. PART": "KITXWXSM1UP",
+        "MFG": "KITXWXSM1UP",
         "Brand": "Chief",
         "Maximum Load (lbs)": "250",
         "VESA's": "100 x 600 ,891 x 1500",
@@ -70,7 +70,7 @@
         "Clearance": 6
     },
     {
-        "MFG. PART": "PSMH2079",
+        "MFG": "PSMH2079",
         "Brand": "Chief",
         "Maximum Load (lbs)": "350",
         "VESA's": "",
@@ -80,7 +80,7 @@
         "Clearance": 5
     },
     {
-        "MFG. PART": "RLXT3",
+        "MFG": "RLXT3",
         "Brand": "Chief",
         "Maximum Load (lbs)": "350",
         "VESA's": "",
