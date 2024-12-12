@@ -16,3 +16,21 @@
 .led-screen-form-configuration select {
     width: 100%;
 }
+
+/* Radio Button Inputs */
+.led-screens-radio-toggle form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.led-screens-radio-toggle div {
+    display: flex;
+}
+
+.led-screens-radio-toggle form label {
+    color: #000;
+    position: relative;
+    top: 2px;
+    left: 1px;
+}
