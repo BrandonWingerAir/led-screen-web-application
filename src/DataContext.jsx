@@ -26,15 +26,10 @@ export const DataProvider = ({ children }) => {
   }, [
     state.selectedScreen,
     state.selectedMount,
-    state.selectedMediaPlayer,
-    state.floorLine,
-    state.orientation,
-    state.wallType,
-    state.nicheGap,
-    state.drawer
+    state.selectedMediaPlayer
   ]);
 
-  const updateTotalDepth = (prevDepth) => {
+  const updateTotalDepth = () => {
     const screenDepth = parseFloat(state.selectedScreen.Depth);
     const mediaPlayerDepth = parseFloat(state.selectedMediaPlayer.Depth);
     const mountDepth = parseFloat(state.selectedMount.Depth);
@@ -44,162 +39,85 @@ export const DataProvider = ({ children }) => {
     const totalDepth = screenDepth + backDepth;
     totalDepth.toFixed(2);
 
-    setState({ 
-      screens: screenData, 
-      mounts: mountsData,
-      mediaPlayers: mediaPlayersData, 
-      selectedScreen: state.selectedScreen,
-      selectedMount: state.selectedMount,
-      selectedMediaPlayer: state.selectedMediaPlayer,
-      floorLine: state.floorLine,
-      orientation: state.orientation,
-      wallType: state.wallType,
-      nicheGap: state.nicheGap,
+    setState(prevState => ({ 
+      ...prevState, 
       totalDepth: totalDepth,
-      drawer: state.drawer
-    });
+    }));
   }
   
   const updateSelectedScreen = (newValue) => { 
     const newScreen = state.screens.find(item => Object.values(item)[0] === newValue);
 
-    setState({ 
-      screens: screenData, 
-      mounts: mountsData,
-      mediaPlayers: mediaPlayersData, 
+    setState(prevState => ({ 
+      ...prevState, 
       selectedScreen: newScreen,
-      selectedMount: state.selectedMount,
-      selectedMediaPlayer: state.selectedMediaPlayer,
-      floorLine: state.floorLine,
-      orientation: state.orientation,
-      wallType: state.wallType,
-      nicheGap: state.nicheGap,
-      totalDepth: state.totalDepth,
-      drawer: state.drawer
-    });
+    }));    
   };
 
   const updateSelectedMount = (newValue) => { 
     const newMount = state.mounts.find(item => Object.values(item)[0] === newValue);
 
-    setState({ 
-      screens: screenData, 
-      mounts: mountsData,
-      mediaPlayers: mediaPlayersData, 
-      selectedScreen: state.selectedScreen, 
+    setState(prevState => ({ 
+      ...prevState, 
       selectedMount: newMount,
-      selectedMediaPlayer: state.selectedMediaPlayer,
-      floorLine: state.floorLine,
-      orientation: state.orientation,
-      wallType: state.wallType,
-      nicheGap: state.nicheGap,
-      totalDepth: state.depth,
-      drawer: state.drawer
-    });
+    }));
   };
 
   const updateSelectedMediaPlayer = (newValue) => { 
     const newMediaPlayer = state.mediaPlayers.find(item => Object.values(item)[0] === newValue);
 
-    setState({ 
-      screens: screenData, 
-      mounts: mountsData,
-      mediaPlayers: mediaPlayersData, 
-      selectedScreen: state.selectedScreen, 
-      selectedMount: state.selectedMount,
+    setState(prevState => ({ 
+      ...prevState, 
       selectedMediaPlayer: newMediaPlayer,
-      floorLine: state.floorLine,
-      orientation: state.orientation,
-      wallType: state.wallType,
-      nicheGap: state.nicheGap,
-      totalDepth: state.depth,
-      drawer: state.drawer
-    });
+    }));
   };
 
   const updateFloorLine = (newValue) => {
-    setState({ 
-      screens: screenData, 
-      mounts: mountsData,
-      mediaPlayers: mediaPlayersData, 
-      selectedScreen: state.selectedScreen, 
-      selectedMount: state.selectedMount,
-      selectedMediaPlayer: state.selectedMediaPlayer,
+    setState(prevState => ({ 
+      ...prevState, 
       floorLine: newValue,
-      orientation: state.orientation,
-      wallType: state.wallType,
-      nicheGap: state.nicheGap,
-      totalDepth: state.depth,
-      drawer: state.drawer
-    });
+    }));
   }
 
   const updateWallType = (newValue) => {
-    setState({ 
-      screens: screenData, 
-      mounts: mountsData,
-      mediaPlayers: mediaPlayersData, 
-      selectedScreen: state.selectedScreen, 
-      selectedMount: state.selectedMount,
-      selectedMediaPlayer: state.selectedMediaPlayer,
-      floorLine: state.floorLine,
-      orientation: state.orientation,
-      wallType: newValue,
-      nicheGap: state.nicheGap,
-      totalDepth: state.depth,
-      drawer: state.drawer
-    });
+    let nicheGap = state.nicheGap;
+
+    if (newValue == 'Niche') {
+      if (nicheGap == 0) {
+        nicheGap = 1.5;
+      } else {
+        nicheGap = state.nicheGap
+      }
+    } else {
+      nicheGap = 0;
+    }
+
+    setState(prevState => ({ 
+      ...prevState,
+      nicheGap: nicheGap,
+      wallType: newValue
+    }));
   }
 
   const updateOrientation = (newValue) => {
-    setState({ 
-      screens: screenData, 
-      mounts: mountsData,
-      mediaPlayers: mediaPlayersData, 
-      selectedScreen: state.selectedScreen,
-      selectedMount: state.selectedMount,
-      selectedMediaPlayer: state.selectedMediaPlayer,
-      floorLine: state.floorLine,
+    setState(prevState => ({ 
+      ...prevState, 
       orientation: newValue,
-      wallType: state.wallType,
-      nicheGap: state.nicheGap,
-      totalDepth: state.depth,
-      drawer: state.drawer
-    });
+    }));
   }
 
   const updateNicheGap = (newValue) => {
-    setState({ 
-      screens: screenData, 
-      mounts: mountsData,
-      mediaPlayers: mediaPlayersData, 
-      selectedScreen: state.selectedScreen, 
-      selectedMount: state.selectedMount,
-      selectedMediaPlayer: state.selectedMediaPlayer,
-      floorLine: state.floorLine,
-      orientation: state.orientation,
-      wallType: state.wallType,
+    setState(prevState => ({ 
+      ...prevState, 
       nicheGap: newValue,
-      depth: state.depth,
-      drawer: state.drawer
-    });
+    }));
   }
 
   const updateDrawer = (newValue) => {
-    setState({ 
-      screens: screenData, 
-      mounts: mountsData,
-      mediaPlayers: mediaPlayersData, 
-      selectedScreen: state.selectedScreen, 
-      selectedMount: state.selectedMount,
-      selectedMediaPlayer: state.selectedMediaPlayer,
-      floorLine: state.floorLine,
-      orientation: state.orientation,
-      wallType: state.wallType,
-      nicheGap: state.nicheGap,
-      depth: state.depth,
+    setState(prevState => ({ 
+      ...prevState, 
       drawer: newValue
-    });
+    }));
   }
 
   return (
