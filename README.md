@@ -5,3 +5,5 @@
     npm install
     npm run dev
 ```
+
+![Screenshot](screenshot.png?raw=true "1366x768")

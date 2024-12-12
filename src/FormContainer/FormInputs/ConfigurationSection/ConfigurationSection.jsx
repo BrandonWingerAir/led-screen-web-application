@@ -5,6 +5,7 @@ import FloorLineTextBox from "./FloorLineTextBox/FloorLineTextBox";
 import NicheRadioBtn from "./NicheRadioBtn/NicheRadioBtn";
 import NicheGapTextBox from "./NicheGapTextBox/NicheGapTextBox";
 import OrientationRadioBtn from "./OrientationRadioBtn/OrientationRadioBtn";
+import SelectMediaPlayer from "./SelectMediaPlayer/SelectMediaPlayer";
 
 function ConfigurationSection() {
 
@@ -13,6 +14,7 @@ function ConfigurationSection() {
         <h3>Configuration</h3>
         <SelectScreen/>
         <SelectMount/>
+        <SelectMediaPlayer/>
         <FloorLineTextBox/>
         <OrientationRadioBtn/>
         <NicheRadioBtn/>

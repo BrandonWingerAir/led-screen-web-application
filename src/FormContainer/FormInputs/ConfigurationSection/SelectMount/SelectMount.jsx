@@ -17,7 +17,6 @@ const SelectMount = () => {
     <div>
       <label htmlFor="led_mount">Mount</label>
       <select onChange={handleChange}> 
-          <option value={mounts[0]}>Choose Mount</option> 
           {Array.isArray(mounts) && firstPropertyValues.map((value, index) => ( 
               <option key={index} value={value}> {value} </option>
           ))} 

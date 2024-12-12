@@ -26,6 +26,11 @@ function NicheDimensions() {
         <p>Width</p>
         <p>{nicheWidth}"</p>
       </div>
+      <div className="led-screens-dimension-grid">
+        <p>Depth</p>
+        {/* Screen depth + Max(Media player depth, Mount depth) + Depth variance */}
+        <p>{state.totalDepth}"</p>
+      </div>
     </div>
   )
 }
