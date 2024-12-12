@@ -31,7 +31,7 @@ const Diagram = () => {
     outerNiche = 2;
   }
 
-  // Reverse values for vertical orientation
+  // Set monitor dimensions based on orientation
   if (state.orientation == 'horizontal') {
     monitorWidth = state.selectedScreen.Width;
     monitorHeight = state.selectedScreen.Height;
@@ -99,6 +99,20 @@ const Diagram = () => {
   let centerMountWidth = (canvasWidth - mountWidth) / 2;
   let centerMountHeight = (canvasHeight - mountHeight) / 2;
 
+  // Set monitor dimensions based on orientation
+  let floorLineX = 0;
+  let floorLineY = 0;
+
+  if (state.orientation == "horizontal") {
+    floorLineX = monitorWidth;
+    floorLineY = monitorHeight;
+
+  } else {
+    floorLineX = monitorHeight;
+    floorLineY = monitorWidth;
+
+  }
+
   // Render Canvas
   return (
     <div 
@@ -107,7 +121,7 @@ const Diagram = () => {
     >
       <Stage width={canvasWidth} height={canvasHeight}>
         <Layer>
-          {/* Niche Rectangle */}
+          {/* Niche Box */}
           <Rect
             x={ centerWidth - outerNiche / 2}
             y={ centerHeight - outerNiche / 2 }
@@ -118,7 +132,7 @@ const Diagram = () => {
             strokeWidth={1}
           />
 
-          {/* Screen Rectangle */}
+          {/* Screen Box */}
           <Rect
             x={centerWidth}
             y={centerHeight}
@@ -129,7 +143,7 @@ const Diagram = () => {
             strokeWidth={2}
           />
 
-          {/* Mount Rectangle */}
+          {/* Mount Box */}
           <Rect
             x={centerMountWidth}
             y={centerMountHeight}
@@ -165,7 +179,7 @@ const Diagram = () => {
 
           {/* Screen Height (Position: Right Center) */}
           <Rect
-            x={centerWidth + monitorWidth * 1.1} 
+            x={centerWidth + monitorWidth * 1.15} 
             y={centerHeight + monitorHeight * 0.5 - 50}
             width={60}
             height={40}
@@ -174,7 +188,7 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={centerWidth + monitorWidth * 1.1 + 10} 
+            x={centerWidth + monitorWidth * 1.15 + 10} 
             y={centerHeight + monitorHeight / 2 - 36}
             text={`${
               state.orientation == 'horizontal' ? 
@@ -213,8 +227,8 @@ const Diagram = () => {
 
           {/* Floor Line Distance (Position: Left Center) */}
           <Rect
-            x={monitorWidth * 0.2 - 5} 
-            y={monitorHeight * 2.75}
+            x={floorLineX * 0.2 - 5} 
+            y={floorLineY * 2.75}
             width={60}
             height={40}
             fill="#f5f5f5"
@@ -222,22 +236,22 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={monitorWidth * 0.2 + 16} 
-            y={monitorHeight * 2.75 + 16}
+            x={floorLineX * 0.2 + 16} 
+            y={floorLineY * 2.75 + 16}
             text={state.floorLine + `"`}
             fontSize={12} 
             fill="black" 
           />
           <Text 
-            x={monitorWidth * 0.2 - 10} 
-            y={monitorHeight * 2.75 + 48}
+            x={floorLineX * 0.2 - 10} 
+            y={floorLineY * 2.75 + 48}
             text={`Centerline of`}
             fontSize={12} 
             fill="black" 
           />
           <Text 
-            x={monitorWidth * 0.2 + 5} 
-            y={monitorHeight * 2.75 + 64}
+            x={floorLineX * 0.2 + 5} 
+            y={floorLineY * 2.75 + 64}
             text={`Display`}
             fontSize={12} 
             fill="black" 
@@ -246,9 +260,9 @@ const Diagram = () => {
           {/* Vertical Floor Line */}
           <Arrow 
             points={[
-              monitorWidth * 0.56, 
+              floorLineX * 0.56, 
               centerHeight + monitorHeight / 2 + 20, 
-              monitorWidth * 0.56, 
+              floorLineX * 0.56, 
               floorLine
             ]} 
             stroke="black" 
@@ -261,9 +275,9 @@ const Diagram = () => {
           {/* Horizontal Floor Line */}
           <Line 
             points={[
-              monitorWidth * 0.56, 
+              floorLineX * 0.56, 
               floorLine + 14,
-              monitorWidth * 2, 
+              floorLineX * 2, 
               floorLine + 14
             ]} 
             stroke="black" 
