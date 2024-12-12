@@ -6,7 +6,7 @@ function Information() {
 
   return (
     <div id='led-screens-installation-desc'>
-      <p>{state.selectedScreen.Make} {state.selectedScreen.MFR}</p>
+      <p>Drawn: {state.drawer}</p>
     </div>
   )
 }

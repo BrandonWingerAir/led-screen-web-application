@@ -18,11 +18,12 @@ export const DataProvider = ({ children }) => {
     wallType: 'Niche',
     nicheGap: 1.5,
     totalDepth: 0,
-    nicheDepth: 0
+    nicheDepth: 0,
+    drawer: ''
   });
 
   useEffect(() => { 
-    updateTotalDepth();
+    updateTotalDepth(state.totalDepth);
   }, [
     state.selectedScreen,
     state.selectedMount,
@@ -31,19 +32,16 @@ export const DataProvider = ({ children }) => {
     state.orientation,
     state.wallType,
     state.nicheGap,
-    state.setTotalDepth,
-    state.nicheDepth
+    state.nicheDepth,
+    state.drawer
   ]);
 
-  const updateTotalDepth = () => {
+  const updateTotalDepth = (prevDepth) => {
     const screenDepth = parseFloat(state.selectedScreen.Depth);
     const mediaPlayerDepth = parseFloat(state.selectedMediaPlayer.Depth);
     const mountDepth = parseFloat(state.selectedMount.Depth);
 
     const backDepth = Math.max(mediaPlayerDepth, mountDepth);
-
-    console.log(state.selectedMount);
-    
 
     const totalDepth = screenDepth + backDepth;
     totalDepth.toFixed(2);
@@ -60,10 +58,11 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: totalDepth,
-      nicheDepth: state.nicheDepth
+      nicheDepth: state.nicheDepth,
+      drawer: state.drawer
     });
   }
-
+  
   const updateSelectedScreen = (newValue) => { 
     const newScreen = state.screens.find(item => Object.values(item)[0] === newValue);
 
@@ -79,7 +78,8 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: state.totalDepth,
-      nicheDepth: state.nicheDepth
+      nicheDepth: state.nicheDepth,
+      drawer: state.drawer
     });
   };
 
@@ -98,7 +98,8 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: state.depth,
-      nicheDepth: state.nicheDepth
+      nicheDepth: state.nicheDepth,
+      drawer: state.drawer
     });
   };
 
@@ -117,7 +118,8 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: state.depth,
-      nicheDepth: state.nicheDepth
+      nicheDepth: state.nicheDepth,
+      drawer: state.drawer
     });
   };
 
@@ -134,7 +136,8 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: state.depth,
-      nicheDepth: state.nicheDepth
+      nicheDepth: state.nicheDepth,
+      drawer: state.drawer
     });
   }
 
@@ -151,7 +154,8 @@ export const DataProvider = ({ children }) => {
       wallType: newValue,
       nicheGap: state.nicheGap,
       totalDepth: state.depth,
-      nicheDepth: state.nicheDepth
+      nicheDepth: state.nicheDepth,
+      drawer: state.drawer
     });
   }
 
@@ -168,7 +172,8 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: state.nicheGap,
       totalDepth: state.depth,
-      nicheDepth: state.nicheDepth
+      nicheDepth: state.nicheDepth,
+      drawer: state.drawer
     });
   }
 
@@ -185,7 +190,26 @@ export const DataProvider = ({ children }) => {
       wallType: state.wallType,
       nicheGap: newValue,
       depth: state.depth,
-      nicheDepth: state.nicheDepth
+      nicheDepth: state.nicheDepth,
+      drawer: state.drawer
+    });
+  }
+
+  const updateDrawer = (newValue) => {
+    setState({ 
+      screens: screenData, 
+      mounts: mountsData,
+      mediaPlayers: mediaPlayersData, 
+      selectedScreen: state.selectedScreen, 
+      selectedMount: state.selectedMount,
+      selectedMediaPlayer: state.selectedMediaPlayer,
+      floorLine: state.floorLine,
+      orientation: state.orientation,
+      wallType: state.wallType,
+      nicheGap: state.nicheGap,
+      depth: state.depth,
+      nicheDepth: state.nicheDepth,
+      drawer: newValue
     });
   }
 
@@ -199,7 +223,8 @@ export const DataProvider = ({ children }) => {
         updateFloorLine,
         updateOrientation,
         updateWallType,
-        updateNicheGap
+        updateNicheGap,
+        updateDrawer
       }}
     >
       {children}
