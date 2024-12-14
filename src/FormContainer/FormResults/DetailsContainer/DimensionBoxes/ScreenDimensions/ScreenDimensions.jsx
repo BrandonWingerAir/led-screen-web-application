@@ -26,6 +26,10 @@ function ScreenDimensions() {
         <p>Width</p>
         <p>{screenWidth}"</p>
       </div>
+      <div className="led-screens-dimension-grid">
+        <p>Floor Line</p>
+        <p>{state.floorLine}"</p>
+      </div>
     </div>
   )
 }

@@ -15,7 +15,7 @@ function DownloadBtn() {
         Download
       </button>
       <div className="led-screen-download-icon">
-
+        <span>↓</span>
       </div>
     </div>
   )

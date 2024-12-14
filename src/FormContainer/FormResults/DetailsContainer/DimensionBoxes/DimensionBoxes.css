@@ -13,10 +13,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
+    font-size: 15px;
 }
 
 .led-screens-dimension-grid p {
-    padding: 0.6vw 1.75vw;
+    width: 7vw;
+    padding: 10px 0;
     border: 1px solid #000;
     margin: 6px 0;
 }
