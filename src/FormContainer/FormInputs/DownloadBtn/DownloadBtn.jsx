@@ -14,6 +14,9 @@ function DownloadBtn() {
       <button onClick={() => saveComponentsAsPdf(componentIds)}>
         Download
       </button>
+      <div className="led-screen-download-icon">
+
+      </div>
     </div>
   )
 }

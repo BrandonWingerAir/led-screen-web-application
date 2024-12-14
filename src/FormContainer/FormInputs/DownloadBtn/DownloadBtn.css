@@ -18,3 +18,10 @@
 .led-screen-form-download button:hover {
     cursor: pointer;
 }
+
+.led-screen-download-icon {
+    width: 55px;
+    height: 100%;
+    background: 184fee;
+    border-left: 1px solid #fafafa;
+}
