@@ -6,6 +6,7 @@ import FloorLineInputBox from "./FloorLineInputBox/FloorLineInputBox";
 import NicheRadioBtn from "./NicheRadioBtn/NicheRadioBtn";
 import NicheGapInputBox from "./NicheGapInputBox/NicheGapInputBox";
 import OrientationRadioBtn from "./OrientationRadioBtn/OrientationRadioBtn";
+import SelectReceptacleBox from "./SelectReceptacleBox/SelectReceptacleBox";
 
 function ConfigurationSection() {
 
@@ -15,6 +16,7 @@ function ConfigurationSection() {
         <SelectScreen/>
         <SelectMediaPlayer/>
         <SelectMount/>
+        <SelectReceptacleBox/>
         <OrientationRadioBtn/>
         <NicheRadioBtn/>
         <FloorLineInputBox/>

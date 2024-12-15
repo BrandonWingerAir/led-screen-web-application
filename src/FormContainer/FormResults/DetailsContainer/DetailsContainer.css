@@ -9,5 +9,5 @@
 }
 
 .led-screen-details-section > div > div{
-    padding: var(--led_screen_app_padding);
+    padding: var(--led_screen_app_padding) calc(var(--led_screen_app_padding) / 1.7);
 }

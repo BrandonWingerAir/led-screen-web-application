@@ -28,7 +28,7 @@ function NicheDimensions() {
       </div>
       <div className="led-screens-dimension-grid">
         <p>Depth</p>
-        <p>{state.totalDepth}"</p>
+        <p>{state.totalDepth.toFixed(2)}"</p>
       </div>
     </div>
   )

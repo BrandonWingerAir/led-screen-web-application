@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import screenData from './data/screens.json';
 import mountsData from './data/mounts.json';
 import mediaPlayersData from './data/mediaPlayers.json';
+import receptacleBoxesData from './data/receptacleBoxes.json';
 
 const DataContext = createContext();
 
@@ -10,9 +11,11 @@ export const DataProvider = ({ children }) => {
     screens: screenData,
     mounts: mountsData,
     mediaPlayers: mediaPlayersData,
+    receptacleBoxes: receptacleBoxesData,
     selectedScreen: screenData[0],
     selectedMount: mountsData[0],
     selectedMediaPlayer: mediaPlayersData[0],
+    selectedReceptacleBox: receptacleBoxesData[0],
     floorLine: 50,
     orientation: 'horizontal',
     wallType: 'Niche',
@@ -72,6 +75,16 @@ export const DataProvider = ({ children }) => {
     }));
   };
 
+
+  const updateSelectedReceptacleBox = (newValue) => { 
+    const newReceptacleBox = state.receptacleBoxes.find(item => Object.values(item)[0] === newValue);
+
+    setState(prevState => ({ 
+      ...prevState, 
+      selectedReceptacleBox: newReceptacleBox,
+    }));
+  };
+
   const updateFloorLine = (newValue) => {
     setState(prevState => ({ 
       ...prevState, 
@@ -127,6 +140,7 @@ export const DataProvider = ({ children }) => {
         updateSelectedScreen, 
         updateSelectedMount,
         updateSelectedMediaPlayer,
+        updateSelectedReceptacleBox,
         updateFloorLine,
         updateOrientation,
         updateWallType,
