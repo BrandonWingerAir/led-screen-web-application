@@ -9,6 +9,12 @@ const Diagram = () => {
   let monitorWidth = state.selectedScreen.Width;
   let monitorHeight = state.selectedScreen.Height;
 
+  let totalWidth = parseFloat(state.selectedScreen.Width) + parseFloat(state.nicheGap);
+  let totalHeight = parseFloat(state.selectedScreen.Height) + parseFloat(state.nicheGap);
+
+  totalWidth = totalWidth.toFixed(2);
+  totalHeight = totalHeight.toFixed(2);
+
   let mountWidth = state.selectedMount.Width;
   let mountHeight = state.selectedMount.Height;
 
@@ -172,6 +178,28 @@ const Diagram = () => {
               state.orientation == 'horizontal' ? 
                 state.selectedScreen.Width 
                 : state.selectedScreen.Height
+              }` + `"`}
+            fontSize={14} 
+            fill="black" 
+          />
+
+          {/* Niche Width (Position: Bottom Center) */}
+          <Rect
+            x={centerWidth + monitorWidth * 0.5 - 72} 
+            y={centerHeight + monitorHeight + 28}
+            width={60}
+            height={40}
+            fill="#f5f5f5"
+            stroke="black"
+            strokeWidth={1}
+          />
+          <Text 
+            x={centerWidth + monitorWidth * 0.5 - 63} 
+            y={centerHeight + monitorHeight * 1.5 - 15}
+            text={`${
+              state.orientation == 'horizontal' ? 
+                totalWidth 
+                : totalHeight
               }` + `"`}
             fontSize={14} 
             fill="black" 
