@@ -195,10 +195,10 @@ const Diagram = () => {
           />
           <Text 
             x={centerWidth + monitorWidth * 0.5 - 63} 
-            y={centerHeight + monitorHeight * 1.5 - 15}
+            y={centerHeight + monitorHeight + 43}
             text={`${
               state.orientation == 'horizontal' ? 
-                totalWidth 
+                totalWidth
                 : totalHeight
               }` + `"`}
             fontSize={14} 
@@ -227,7 +227,7 @@ const Diagram = () => {
             fill="black" 
           />
 
-          {/* Screen Height (Position: Right Center) */}
+          {/* Niche Height (Position: Left Center) */}
           <Rect
             x={centerWidth - monitorWidth / 2} 
             y={centerHeight + monitorHeight * 0.5 - 50}
