@@ -11,6 +11,7 @@ function DescriptionResults() {
       <p>Drawn: {state.drawer}</p>
       <p>Department: {state.department}</p>
       <p>Screen Size: {state.screenSizeDesc}</p>
+      <p>Date: {state.descriptionDate}</p>
     </div>
   )
 }

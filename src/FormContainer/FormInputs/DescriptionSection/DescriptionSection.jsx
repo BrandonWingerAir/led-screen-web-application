@@ -1,3 +1,4 @@
+import DateInputBox from "./DateInputBox/DateInputBox";
 import DepartmentTextBox from "./DepartmentTextBox/DepartmentTextBox";
 import DrawerTextBox from "./DrawerTextBox/DrawerTextBox";
 import ScreenSizeTextBox from "./ScreenSizeTextBox/ScreenSizeTextBox";
@@ -12,6 +13,7 @@ function DescriptionSection() {
       <DrawerTextBox/>
       <DepartmentTextBox/>
       <ScreenSizeTextBox/>
+      <DateInputBox/>
     </div>
   )
 }

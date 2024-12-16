@@ -6,6 +6,8 @@ import receptacleBoxesData from './data/receptacleBoxes.json';
 
 const DataContext = createContext();
 
+const currentDate = new Date;
+
 export const DataProvider = ({ children }) => {
   const [state, setState] = useState({ 
     screens: screenData,
@@ -24,7 +26,8 @@ export const DataProvider = ({ children }) => {
     descTitle: '',
     drawer: '',
     department: '',
-    screenSizeDesc: ''
+    screenSizeDesc: '',
+    descriptionDate: currentDate.toLocaleDateString('en-CA')
   });
 
   useEffect(() => { 
@@ -157,6 +160,13 @@ export const DataProvider = ({ children }) => {
     }));
   }
 
+  const updateDescriptionDate = (newValue) => {
+    setState(prevState => ({ 
+      ...prevState, 
+      descriptionDate: newValue
+    }));
+  }
+
   return (
     <DataContext.Provider 
       value={{ 
@@ -172,7 +182,8 @@ export const DataProvider = ({ children }) => {
         updateDescTitle,
         updateDrawer,
         updateDepartment,
-        updateScreenSizeDesc
+        updateScreenSizeDesc,
+        updateDescriptionDate
       }}
     >
       {children}
