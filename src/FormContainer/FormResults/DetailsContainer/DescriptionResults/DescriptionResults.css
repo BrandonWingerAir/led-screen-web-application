@@ -1,3 +1,21 @@
 #led-screens-installation-desc {
     border: 1px solid var(--led_screen_border_light);
 }
+
+.led-screens-desc-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.led-screens-desc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 1px solid var(--led_screen_border_light);
+}
+
+.led-screens-desc-grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--led_screen_border_light);
+}
