@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 40px;
+    border: 1px solid var(--led_screen_border_light);
 }
 
 .led-screen-form-download button {
