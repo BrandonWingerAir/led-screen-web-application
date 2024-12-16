@@ -1,25 +1,25 @@
 import { useContext } from 'react';
 import DataContext from '../../../../DataContext.jsx';
 
-const DrawerTextBox = () => {
-  const { state, updateDrawer } = useContext(DataContext);
+const TitleTextBox = () => {
+  const { state, updateDescTitle } = useContext(DataContext);
     
   const handleChange = (event) => {     
     const selectedValue = event.target.value;
-    updateDrawer(selectedValue);
+    updateDescTitle(selectedValue);
   };
 
   return (
     <div>
-      <label htmlFor="led_screen_drawer">Drawer</label>
+      <label htmlFor="led_screen_desc_title">Title</label>
       <input 
         type="text" 
         onChange={handleChange} 
-        value={state.drawer}
-        placeholder='Enter Name'
+        value={state.descTitle}
+        placeholder='Enter Title'
       />
     </div>
   );
 };
 
-export default DrawerTextBox;
+export default TitleTextBox;

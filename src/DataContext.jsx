@@ -21,7 +21,10 @@ export const DataProvider = ({ children }) => {
     wallType: 'Niche',
     nicheGap: 1.5,
     totalDepth: 0,
-    drawer: ''
+    descTitle: '',
+    drawer: '',
+    department: '',
+    screenSizeDesc: ''
   });
 
   useEffect(() => { 
@@ -126,10 +129,31 @@ export const DataProvider = ({ children }) => {
     }));
   }
 
+  const updateDescTitle = (newValue) => {
+    setState(prevState => ({ 
+      ...prevState, 
+      descTitle: newValue
+    }));
+  }
+
   const updateDrawer = (newValue) => {
     setState(prevState => ({ 
       ...prevState, 
       drawer: newValue
+    }));
+  }
+
+  const updateDepartment = (newValue) => {
+    setState(prevState => ({ 
+      ...prevState, 
+      department: newValue
+    }));
+  }
+
+  const updateScreenSizeDesc = (newValue) => {
+    setState(prevState => ({ 
+      ...prevState, 
+      screenSizeDesc: newValue
     }));
   }
 
@@ -145,7 +169,10 @@ export const DataProvider = ({ children }) => {
         updateOrientation,
         updateWallType,
         updateNicheGap,
-        updateDrawer
+        updateDescTitle,
+        updateDrawer,
+        updateDepartment,
+        updateScreenSizeDesc
       }}
     >
       {children}

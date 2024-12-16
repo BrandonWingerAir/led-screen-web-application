@@ -4,6 +4,7 @@
     column-gap: var(--led_screen_app_padding);
     border: 1px solid var(--led_screen_border_dark);
     padding: var(--led_screen_app_padding);
+    margin-bottom: calc(var(--led_screen_app_padding) / 2);
 }
 
 #led-screens-config-notes p {

@@ -2,3 +2,18 @@
     font-weight: 500;
     margin-bottom: 15px;
 }
+
+.led-screen-form-inputs {
+    border: 1px solid var(--led_screen_border_light);
+    padding: var(--led_screen_app_padding) calc(var(--led_screen_app_padding) / 1.5);
+    margin-bottom: calc(var(--led_screen_app_padding) / 2);
+}
+
+.led-screen-form-inputs label {
+    display: block;
+}
+
+.led-screen-form-inputs label {
+    color: #616161;
+    margin: 9px 0;
+}

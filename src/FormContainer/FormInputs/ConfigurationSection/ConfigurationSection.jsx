@@ -11,7 +11,7 @@ import SelectReceptacleBox from "./SelectReceptacleBox/SelectReceptacleBox";
 function ConfigurationSection() {
 
     return (
-      <div className="led-screen-form-configuration">
+      <div className="led-screen-form-inputs">
         <h3>Configuration</h3>
         <SelectScreen/>
         <SelectMediaPlayer/>
