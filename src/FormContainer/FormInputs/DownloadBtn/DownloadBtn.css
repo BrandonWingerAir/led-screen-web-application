@@ -1,9 +1,9 @@
 .led-screen-form-download {
     background: #184fee;
-    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 40px;
 }
 
 .led-screen-form-download button {

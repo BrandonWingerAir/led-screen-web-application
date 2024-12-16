@@ -15,5 +15,5 @@ function DescriptionResults() {
   )
 }
 
-export default DescriptionResults
+export default DescriptionResults;
   
