@@ -227,6 +227,28 @@ const Diagram = () => {
             fill="black" 
           />
 
+          {/* Screen Height (Position: Right Center) */}
+          <Rect
+            x={centerWidth - monitorWidth / 2} 
+            y={centerHeight + monitorHeight * 0.5 - 50}
+            width={60}
+            height={40}
+            fill="#f5f5f5"
+            stroke="black"
+            strokeWidth={1}
+          />
+          <Text 
+            x={centerWidth - monitorWidth / 2 + 10} 
+            y={centerHeight + monitorHeight / 2 - 36}
+            text={`${
+              state.orientation == 'horizontal' ? 
+                totalHeight 
+                : totalWidth
+              }` + `"`}
+            fontSize={14} 
+            fill="black" 
+          />
+
           {/* Dotted Horizontal Line */}
           <Line 
             points={[
