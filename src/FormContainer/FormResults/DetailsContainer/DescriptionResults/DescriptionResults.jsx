@@ -12,35 +12,78 @@ function DescriptionResults() {
           Logo
         </div>
         <div>
-          Company Info
+          <div>
+            <p>Address</p>
+            <p>Location</p>
+            <p>Phone Number</p>
+          </div>
         </div>
-        <h2>Description: {state.descTitle}</h2>
+        <div>
+          <div>
+            <h3>Description:</h3>
+            <p className='led-screens-results-title'>
+              {state.descTitle}
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="led-screens-desc-grid">
         <div>
-          <p>Drawn: {state.drawer}</p>
+          <div>
+            <p>Drawn:</p>
+          </div>
+          <div>
+            {state.drawer}
+          </div>
         </div>
-        <div>
+        <div className='led-screens-desc-units'>
           <p>Dimensions in inches</p>
         </div>
         <div>
-          <p>Visualization</p>
+          <div className='led-screens-desc-diagram'>
+            {/* Image Here */}
+          </div>
         </div>
         <div>
-          <p>Screen Size: {state.screenSizeDesc}</p>
+          <div>
+            <p>Screen Size:</p>
+          </div>
+          <div>
+            {state.screenSizeDesc}
+          </div>
         </div>
         <div>
-          <p>Date: {state.descriptionDate}</p>
+          <div>
+            <p>Date</p>
+          </div>
+          <div>
+            {state.descriptionDate}
+          </div>
         </div>
         <div>
-          <p>Sheet 1 of 1</p>
+          <div>
+            <p>Sheet</p>
+          </div>
+          <div>
+            <p>1 of 1</p>
+          </div>
         </div>
         <div>
-          Revision 00
+          <div>
+            Revision
+          </div>
+          <div>
+            00
+          </div>
         </div>
         <div>
-          <p>Department: {state.department}</p>
+          <div>
+            <p>Department</p>
+          </div>
+          <div>
+            <p>{state.department}</p>
+          </div>
         </div>
       </div>
     </div>

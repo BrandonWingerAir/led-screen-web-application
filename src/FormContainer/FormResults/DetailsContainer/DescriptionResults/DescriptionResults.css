@@ -5,17 +5,70 @@
 .led-screens-desc-header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: calc(var(--led_screen_app_padding) / 2);
+}
+
+.led-screens-desc-header > div {
+    display: flex;
+    align-items: flex-end;
+}
+
+.led-screens-desc-header > div:first-of-type {
+    align-self: center;
+}
+
+.led-screens-desc-header p {
+    font-weight: 400;
+    color: #616161;
+}
+
+.led-screens-desc-header h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.led-screens-desc-header .led-screens-results-title {
+    color: #000;
+    font-weight: 500;
+    height: 10px;
+    margin-bottom: 10px;
 }
 
 .led-screens-desc-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     border: 1px solid var(--led_screen_border_light);
+    text-align: center;
+    font-size: 14px;
 }
 
-.led-screens-desc-grid div {
+.led-screens-desc-grid > div {
+    border: 1px solid var(--led_screen_border_light);
+}
+
+.led-screens-desc-grid div div {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--led_screen_border_light);
+    min-height: 32px;
+}
+
+.led-screens-desc-grid div div:first-of-type {
+    background: #ffedc0;
+    font-weight: 500;
+    border-bottom: 2px solid var(--led_screen_border_light);
+}
+
+.led-screens-desc-units {
+    background: #ffedc0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.led-screens-desc-diagram {
+    height: 100%;
+    background: #fff !important;
+    min-height: 64px;
 }
