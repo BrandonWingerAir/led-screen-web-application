@@ -1,5 +1,5 @@
 .led-screen-app-header {
-    border-bottom: 1px solid var(--led_screen_border_color);
+    border-bottom: 1px solid var(--led_screen_border_light);
     display: flex;
     align-items: center;
     padding: 25px var(--led_screen_app_padding);

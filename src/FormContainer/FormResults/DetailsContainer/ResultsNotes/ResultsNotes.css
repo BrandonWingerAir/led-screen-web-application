@@ -1,0 +1,17 @@
+#led-screens-config-notes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--led_screen_app_padding);
+    border: 1px solid var(--led_screen_border_dark);
+    padding: var(--led_screen_app_padding);
+}
+
+#led-screens-config-notes p {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+#led-screens-config-notes p:first-of-type {
+    font-size: 16px;
+    margin-bottom: 8px;
+}

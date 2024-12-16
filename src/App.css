@@ -2,7 +2,8 @@
 
 :root {
   --led_screen_app_padding: 30px;
-  --led_screen_border_color: #e0e0e0;
+  --led_screen_border_light: #e0e0e0;
+  --led_screen_border_dark: #212121;
 }
 
 html {

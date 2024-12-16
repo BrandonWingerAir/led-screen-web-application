@@ -1,5 +1,5 @@
 import DimensionBoxes from "./DimensionBoxes/DimensionBoxes";
-import Notes from "./Notes/Notes";
+import ResultsNotes from "./ResultsNotes/ResultsNotes";
 import DescriptionBoxes from "./DescriptionBoxes/DescriptionBoxes";
 import ConfigDetailsPDF from "./ConfigDetailsPDF/ConfigDetailsPDF"
 import "./DetailsContainer.css";
@@ -9,7 +9,7 @@ function DetailsContainer() {
     <div className="led-screen-details-section">
       <DimensionBoxes/>
       <div className="led-screen-flex-bottom">
-        <Notes/>
+        <ResultsNotes/>
         <DescriptionBoxes/>
       </div>
       <ConfigDetailsPDF/>

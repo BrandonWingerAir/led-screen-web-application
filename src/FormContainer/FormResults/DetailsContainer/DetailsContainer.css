@@ -11,3 +11,29 @@
 .led-screen-details-section > div > div{
     padding: var(--led_screen_app_padding) calc(var(--led_screen_app_padding) / 1.7);
 }
+
+/* Dimension Boxes */
+.led-screens-dimension-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-size: 15px;
+}
+
+.led-screens-dimension-grid p {
+    height: 37px;
+    border: 1px solid #000;
+    margin: 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.led-screens-dimension-grid p:first-of-type {
+    background: #9c9c9c;
+    color: #fff;
+}
+
+.led-screens-dimension-grid p:last-of-type {
+    border-left: none;
+}
