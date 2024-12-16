@@ -46,61 +46,61 @@ const Diagram = () => {
     monitorHeight = state.selectedScreen.Width;
   }
 
-  // Scale Selection
-  const monitorScale1 = 0.4;
-  const monitorScale2 = 2;
-  const monitorScale3 = 3;
-  const monitorScale4 = 4;
-  const monitorScale5 = 5;
-  const monitorScale6 = 25;
+  // Scale Selection (TODO: Refactor to be reponsive based on container size and dpi)
+  const diagramScale1 = 0.4;
+  const diagramScale2 = 2;
+  const diagramScale3 = 3;
+  const diagramScale4 = 4;
+  const diagramScale5 = 5;
+  const diagramScale6 = 25;
 
   switch (true) {
     case monitorWidth > 500:
-      monitorWidth *= monitorScale1; 
-      monitorHeight *= monitorScale1;
-      mountWidth *= monitorScale1; 
-      mountHeight *= monitorScale1;
-      outerNiche *= monitorScale1;
+      monitorWidth *= diagramScale1; 
+      monitorHeight *= diagramScale1;
+      mountWidth *= diagramScale1; 
+      mountHeight *= diagramScale1;
+      outerNiche *= diagramScale1;
       break;
     case monitorWidth > 100:
-      monitorWidth*= monitorScale2; 
-      monitorHeight *= monitorScale2;
-      mountWidth *= monitorScale2; 
-      mountHeight *= monitorScale2;
-      outerNiche *= monitorScale2;
+      monitorWidth*= diagramScale2; 
+      monitorHeight *= diagramScale2;
+      mountWidth *= diagramScale2; 
+      mountHeight *= diagramScale2;
+      outerNiche *= diagramScale2;
       break;
     case monitorWidth > 80:
-      monitorWidth*= monitorScale3; 
-      monitorHeight *= monitorScale3;
-      mountWidth *= monitorScale3; 
-      mountHeight *= monitorScale3;
-      outerNiche *= monitorScale3;
+      monitorWidth*= diagramScale3; 
+      monitorHeight *= diagramScale3;
+      mountWidth *= diagramScale3; 
+      mountHeight *= diagramScale3;
+      outerNiche *= diagramScale3;
       break;
     case monitorWidth > 50:
-      monitorWidth*= monitorScale4; 
-      monitorHeight *= monitorScale4;
-      mountWidth *= monitorScale4; 
-      mountHeight *= monitorScale4;
-      outerNiche *= monitorScale4;
+      monitorWidth*= diagramScale4; 
+      monitorHeight *= diagramScale4;
+      mountWidth *= diagramScale4; 
+      mountHeight *= diagramScale4;
+      outerNiche *= diagramScale4;
       break;
     case monitorWidth > 20:
-      monitorWidth*= monitorScale5; 
-      monitorHeight *= monitorScale5;
-      mountWidth *= monitorScale5; 
-      mountHeight *= monitorScale5;
-      outerNiche *= monitorScale5;
+      monitorWidth*= diagramScale5; 
+      monitorHeight *= diagramScale5;
+      mountWidth *= diagramScale5; 
+      mountHeight *= diagramScale5;
+      outerNiche *= diagramScale5;
       break;
     default:
-      monitorWidth*= monitorScale6; 
-      monitorHeight *= monitorScale6;
-      mountWidth *= monitorScale6; 
-      mountHeight *= monitorScale6;
-      outerNiche *= monitorScale6;
+      monitorWidth*= diagramScale6; 
+      monitorHeight *= diagramScale6;
+      mountWidth *= diagramScale6; 
+      mountHeight *= diagramScale6;
+      outerNiche *= diagramScale6;
   }
 
   // Monitor distance from center (Radius)
-  let centerWidth = (canvasWidth - monitorWidth) / 2;
-  let centerHeight = (canvasHeight - monitorHeight) / 2;
+  let screenPositionX = (canvasWidth - monitorWidth) / 2;
+  let screenPositionY = (canvasHeight - monitorHeight) / 2;
 
   let centerMountWidth = (canvasWidth - mountWidth) / 2;
   let centerMountHeight = (canvasHeight - mountHeight) / 2;
@@ -129,8 +129,8 @@ const Diagram = () => {
         <Layer>
           {/* Niche Box */}
           <Rect
-            x={ centerWidth - outerNiche / 2}
-            y={ centerHeight - outerNiche / 2 }
+            x={ screenPositionX - outerNiche / 2}
+            y={ screenPositionY - outerNiche / 2 }
             width={ monitorWidth + outerNiche }
             height={ monitorHeight + outerNiche }
             fill="transparent"
@@ -140,8 +140,8 @@ const Diagram = () => {
 
           {/* Screen Box */}
           <Rect
-            x={centerWidth}
-            y={centerHeight}
+            x={screenPositionX}
+            y={screenPositionY}
             width={monitorWidth}
             height={monitorHeight}
             fill="transparent"
@@ -163,8 +163,8 @@ const Diagram = () => {
 
           {/* Screen Width (Position: Top Center) */}
           <Rect
-            x={centerWidth + monitorWidth * 0.5 - 72} 
-            y={centerHeight - monitorHeight / 4 - 28}
+            x={screenPositionX + monitorWidth * 0.5 - 72} 
+            y={screenPositionY - monitorHeight * 0.25 - 50}
             width={60}
             height={40}
             fill="#f5f5f5"
@@ -172,8 +172,8 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={centerWidth + monitorWidth * 0.5 - 63} 
-            y={centerHeight - monitorHeight * 0.25 - 15}
+            x={screenPositionX + monitorWidth * 0.5 - 63} 
+            y={screenPositionY - monitorHeight * 0.25 - 36}
             text={`${
               state.orientation == 'horizontal' ? 
                 state.selectedScreen.Width 
@@ -183,10 +183,38 @@ const Diagram = () => {
             fill="black" 
           />
 
+          {/* Screen Width Arrows Line */}
+          <Arrow 
+            points={[
+              screenPositionX, 
+              screenPositionY - monitorHeight * 0.25,
+              screenPositionX + monitorWidth, 
+              screenPositionY - monitorHeight * 0.25
+            ]} 
+            stroke="black" 
+            strokeWidth={1}
+            pointerLength={5} 
+            pointerWidth={5}
+            fill="black"
+          />
+          <Arrow 
+            points={[
+              screenPositionX + monitorWidth, 
+              screenPositionY - monitorHeight * 0.25,
+              screenPositionX, 
+              screenPositionY - monitorHeight * 0.25
+            ]} 
+            stroke="black" 
+            strokeWidth={1}
+            pointerLength={5} 
+            pointerWidth={5}
+            fill="black"
+          />
+
           {/* Niche Width (Position: Bottom Center) */}
           <Rect
-            x={centerWidth + monitorWidth * 0.5 - 72} 
-            y={centerHeight + monitorHeight + 28}
+            x={screenPositionX + monitorWidth * 0.5 - 72} 
+            y={screenPositionY + monitorHeight + 28}
             width={60}
             height={40}
             fill="#f5f5f5"
@@ -194,8 +222,8 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={centerWidth + monitorWidth * 0.5 - 63} 
-            y={centerHeight + monitorHeight + 43}
+            x={screenPositionX + monitorWidth * 0.5 - 63} 
+            y={screenPositionY + monitorHeight + 43}
             text={`${
               state.orientation == 'horizontal' ? 
                 totalWidth
@@ -207,8 +235,8 @@ const Diagram = () => {
 
           {/* Screen Height (Position: Right Center) */}
           <Rect
-            x={centerWidth + monitorWidth * 1.15} 
-            y={centerHeight + monitorHeight * 0.5 - 50}
+            x={screenPositionX + monitorWidth * 1.15} 
+            y={screenPositionY + monitorHeight * 0.5 - 50}
             width={60}
             height={40}
             fill="#f5f5f5"
@@ -216,8 +244,8 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={centerWidth + monitorWidth * 1.15 + 10} 
-            y={centerHeight + monitorHeight / 2 - 36}
+            x={screenPositionX + monitorWidth * 1.15 + 10} 
+            y={screenPositionY + monitorHeight / 2 - 36}
             text={`${
               state.orientation == 'horizontal' ? 
                 state.selectedScreen.Height 
@@ -229,8 +257,8 @@ const Diagram = () => {
 
           {/* Niche Height (Position: Left Center) */}
           <Rect
-            x={centerWidth - monitorWidth / 2} 
-            y={centerHeight + monitorHeight * 0.5 - 50}
+            x={screenPositionX - monitorWidth / 2} 
+            y={screenPositionY + monitorHeight * 0.5 - 50}
             width={60}
             height={40}
             fill="#f5f5f5"
@@ -238,8 +266,8 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={centerWidth - monitorWidth / 2 + 10} 
-            y={centerHeight + monitorHeight / 2 - 36}
+            x={screenPositionX - monitorWidth / 2 + 10} 
+            y={screenPositionY + monitorHeight / 2 - 36}
             text={`${
               state.orientation == 'horizontal' ? 
                 totalHeight 
@@ -253,9 +281,9 @@ const Diagram = () => {
           <Line 
             points={[
               canvasWidth / 7.5, 
-              centerHeight + monitorHeight / 2, 
+              screenPositionY + monitorHeight / 2, 
               canvasWidth / 1.75 * 1.5,
-              centerHeight + monitorHeight / 2
+              screenPositionY + monitorHeight / 2
             ]} 
             stroke="black" 
             strokeWidth={1} 
@@ -311,7 +339,7 @@ const Diagram = () => {
           <Arrow 
             points={[
               floorLineX * 0.55, 
-              centerHeight + monitorHeight / 2 + 20, 
+              screenPositionY + monitorHeight / 2 + 20, 
               floorLineX * 0.55, 
               floorLine
             ]} 
