@@ -187,7 +187,7 @@ const Diagram = () => {
           />
           <Rect
             x={canvasWidth / 2 - receptacleBoxWidth / 2 - 2}
-            y={screenPositionY + monitorHeight - receptacleBoxHeight - 2 - 12}
+            y={screenPositionY + monitorHeight - receptacleBoxHeight - 12 - 2}
             width={receptacleBoxWidth + 4}
             height={receptacleBoxHeight + 4}
             fill="transparent"
@@ -395,19 +395,54 @@ const Diagram = () => {
             stroke="black" 
             strokeWidth={1} 
           />
-
           <Text 
-            x={canvasWidth / 2 + 95}               
-              y={canvasHeight / 2 - 185}
+            x={canvasWidth / 2 + 94}               
+              y={canvasHeight / 2 - 186}
               text="Intended"
-              fontSize={14} 
+              fontSize={13} 
               fill="black" 
           />
           <Text 
             x={canvasWidth / 2 + 77} 
             y={canvasHeight / 2 - 169}
             text="Screen Position"
-            fontSize={14} 
+            fontSize={13} 
+            fill="black" 
+          />
+
+          {/* Receptacle Box Diagonal Line Label */}
+          <Line 
+            points={[
+              canvasWidth / 2 + 6, 
+              screenPositionY + monitorHeight - receptacleBoxHeight - 6, 
+              canvasWidth / 2 + 44,
+              screenPositionY - outerNiche / 2 - 40
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+          />
+          <Line 
+            points={[
+              canvasWidth / 2 + 44,
+              screenPositionY - outerNiche / 2 - 40,
+              canvasWidth / 2 + 44 + monitorWidth * 0.1,
+              screenPositionY - outerNiche / 2 - 40
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+          />
+          <Text 
+            x={canvasWidth / 2 + 42 + monitorWidth * 0.1 + 5}               
+            y={screenPositionY - outerNiche / 2 - 54}
+            text="Install recessed"
+            fontSize={13} 
+            fill="black" 
+          />
+          <Text 
+            x={canvasWidth / 2 + 42 + monitorWidth * 0.1 + 8} 
+            y={screenPositionY - outerNiche / 2 - 39}
+            text="receptacle box"
+            fontSize={13}
             fill="black" 
           />
 
