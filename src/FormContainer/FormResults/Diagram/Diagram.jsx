@@ -221,10 +221,10 @@ const Diagram = () => {
           {/* Screen Width Arrow Line (Position: Top) */}
           <Arrow 
             points={[
-              screenPositionX, 
-              screenPositionY - monitorHeight * 0.25,
-              screenPositionX + monitorWidth, 
-              screenPositionY - monitorHeight * 0.25
+              screenPositionX + 3,
+              screenPositionY - outerNiche / 2 - 21,
+              screenPositionX + monitorWidth - 3, 
+              screenPositionY - outerNiche / 2 - 21
             ]} 
             stroke="black" 
             strokeWidth={1}
@@ -260,9 +260,9 @@ const Diagram = () => {
           <Arrow 
             points={[
               screenPositionX + monitorWidth + 25, 
-              screenPositionY,
+              screenPositionY + 3,
               screenPositionX + monitorWidth + 25, 
-              screenPositionY + monitorHeight
+              screenPositionY + monitorHeight - 3
             ]} 
             stroke="black" 
             strokeWidth={1}
@@ -297,9 +297,9 @@ const Diagram = () => {
           {/* Niche Width Arrow Line (Position: Bottom) */}
           <Arrow 
             points={[
-              screenPositionX - outerNiche / 2, 
+              screenPositionX - outerNiche / 2 + 3, 
               screenPositionY + monitorHeight + 25,
-              screenPositionX + monitorWidth + outerNiche / 2, 
+              screenPositionX + monitorWidth + outerNiche / 2 - 3, 
               screenPositionY + monitorHeight + 25
             ]} 
             stroke="black" 
@@ -336,9 +336,9 @@ const Diagram = () => {
           <Arrow 
             points={[
               screenPositionX - 25, 
-              screenPositionY - outerNiche / 2,
+              screenPositionY - outerNiche / 2 + 3,
               screenPositionX - 25, 
-              screenPositionY + monitorHeight + outerNiche / 2
+              screenPositionY + monitorHeight + outerNiche / 2 - 3
             ]} 
             stroke="black" 
             strokeWidth={1}
@@ -372,6 +372,98 @@ const Diagram = () => {
             stroke="black" 
             strokeWidth={1} 
             dash={[4, 2]}
+          />
+
+          {/* Top Left Horizontal Line Marker */}
+          <Line 
+            points={[
+              screenPositionX - outerNiche / 2 - 2, 
+              screenPositionY - outerNiche / 2, 
+              screenPositionX - outerNiche / 2 - 21,
+              screenPositionY - outerNiche / 2
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+          />
+          {/* Top Left Vertical Line Marker */}
+          <Line 
+            points={[
+              screenPositionX, 
+              screenPositionY - outerNiche / 2 - 2, 
+              screenPositionX,
+              screenPositionY - outerNiche / 2 - 21
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+          />
+
+          {/* Bottom Left Horizontal Line Marker */}
+          <Line 
+            points={[
+              screenPositionX - outerNiche / 2 - 2, 
+              screenPositionY + monitorHeight + outerNiche / 2, 
+              screenPositionX - outerNiche / 2 - 21,
+              screenPositionY + monitorHeight + outerNiche / 2
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+            />
+          {/* Bottom Left Vertical Line Marker */}
+          <Line 
+            points={[
+              screenPositionX - outerNiche / 2, 
+              screenPositionY + monitorHeight + outerNiche / 2 + 2, 
+              screenPositionX - outerNiche / 2,
+              screenPositionY + monitorHeight + outerNiche / 2 + 21
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+          />
+
+          {/* Top Right Horizontal Line Marker */}
+          <Line 
+            points={[
+              screenPositionX + monitorWidth + outerNiche / 2 + 2, 
+              screenPositionY, 
+              screenPositionX + monitorWidth + outerNiche / 2 + 21,
+              screenPositionY
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+          />
+          {/* Top Right Vertical Line Marker */}
+          <Line 
+            points={[
+              screenPositionX + monitorWidth, 
+              screenPositionY - outerNiche / 2 - 2, 
+              screenPositionX + monitorWidth,
+              screenPositionY - outerNiche / 2 - 21
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+          />
+
+          {/* Bottom Right Horizontal Line Marker */}
+          <Line 
+            points={[
+              screenPositionX + monitorWidth + outerNiche / 2 + 2, 
+              screenPositionY + monitorHeight, 
+              screenPositionX + monitorWidth + outerNiche / 2 + 21,
+              screenPositionY + monitorHeight
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+          />
+          {/* Bottom Right Vertical Line Marker */}
+          <Line 
+            points={[
+              screenPositionX + monitorWidth + outerNiche / 2, 
+              screenPositionY + monitorHeight + outerNiche / 2 + 2, 
+              screenPositionX + monitorWidth + outerNiche / 2,
+              screenPositionY + monitorHeight + outerNiche / 2 + 21
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
           />
 
           {/* Floor Line Distance Label (Position: Left Center) */}
