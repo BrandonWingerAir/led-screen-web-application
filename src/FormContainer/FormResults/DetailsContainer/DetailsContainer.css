@@ -37,3 +37,9 @@
 .led-screens-dimension-grid p:last-of-type {
     border-left: none;
 }
+
+@media only screen and (max-width: 1080px) {
+    .led-screen-flex-bottom {
+        position: relative;
+    }
+}

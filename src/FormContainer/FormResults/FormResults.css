@@ -5,3 +5,10 @@
     padding: var(--led_screen_app_padding);
     max-width: 100vw;
 }
+
+@media only screen and (max-width: 1080px) {
+    .led-screen-form-section {
+        grid-template-columns: 1fr;
+        min-height: 140vh;
+    }
+}
