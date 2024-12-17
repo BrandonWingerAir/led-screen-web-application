@@ -389,32 +389,32 @@ const Diagram = () => {
             points={[
               canvasWidth / 2, 
               canvasHeight / 2, 
-              canvasWidth / 2 + 55,
-              canvasHeight / 2 - 175
+              canvasWidth / 2 + outerNiche / 2 + 55,
+              canvasHeight / 2 - outerNiche / 2 - 175
             ]} 
             stroke="black" 
             strokeWidth={1} 
           />
           <Line 
             points={[
-              canvasWidth / 2 + 55,
-              canvasHeight / 2 - 175,
-              canvasWidth / 2 + 80,
-              canvasHeight / 2 - 175
+              canvasWidth / 2 + outerNiche / 2 + 55,
+              canvasHeight / 2 - outerNiche / 2 - 175,
+              canvasWidth / 2 + outerNiche / 2 + 80,
+              canvasHeight / 2 - outerNiche / 2 - 175
             ]} 
             stroke="black" 
             strokeWidth={1} 
           />
           <Text 
-            x={canvasWidth / 2 + 94}               
-              y={canvasHeight / 2 - 186}
+            x={canvasWidth / 2 + outerNiche / 2 + 94}               
+              y={canvasHeight / 2 - outerNiche / 2 - 186}
               text="Intended"
               fontSize={13} 
               fill="black" 
           />
           <Text 
-            x={canvasWidth / 2 + 77} 
-            y={canvasHeight / 2 - 169}
+            x={canvasWidth / 2 + outerNiche / 2 + 77} 
+            y={canvasHeight / 2 - outerNiche / 2 - 169}
             text="Screen Position"
             fontSize={13} 
             fill="black" 
