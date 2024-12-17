@@ -218,7 +218,7 @@ const Diagram = () => {
             fill="black" 
           />
 
-          {/* Screen Width Arrow Line (Position: Top) */}
+          {/* Screen Width Arrows Line (Position: Top) */}
           <Arrow 
             points={[
               screenPositionX + 3,
@@ -256,7 +256,7 @@ const Diagram = () => {
             fill="black" 
           />
 
-          {/* Screen Height Arrow Line (Position: Right) */}
+          {/* Screen Height Arrows Line (Position: Right) */}
           <Arrow 
             points={[
               screenPositionX + monitorWidth + 25, 
@@ -294,7 +294,7 @@ const Diagram = () => {
             fill="black" 
           />
 
-          {/* Niche Width Arrow Line (Position: Bottom) */}
+          {/* Niche Width Arrows Line (Position: Bottom) */}
           <Arrow 
             points={[
               screenPositionX - outerNiche / 2 + 3, 
@@ -332,7 +332,7 @@ const Diagram = () => {
             fill="black" 
           />
 
-          {/* Niche Height Arrow Line (Position: Left) */}
+          {/* Niche Height Arrows Line (Position: Left) */}
           <Arrow 
             points={[
               screenPositionX - 25, 
@@ -348,7 +348,7 @@ const Diagram = () => {
             pointerAtBeginning={true}
           />
 
-          {/* Dotted Horizontal Center Line */}
+          {/* Center Dotted Horizontal Line */}
           <Line 
             points={[
               canvasWidth / 7.5, 
@@ -361,7 +361,7 @@ const Diagram = () => {
             dash={[4, 2]} 
           />
 
-          {/* Dotted Vertical Center Line */}
+          {/* Center Dotted Vertical Line */}
           <Line 
             points={[
               canvasWidth / 2, 
@@ -372,6 +372,43 @@ const Diagram = () => {
             stroke="black" 
             strokeWidth={1} 
             dash={[4, 2]}
+          />
+
+          {/* Center Position Diagonal Line Label */}
+          <Line 
+            points={[
+              canvasWidth / 2, 
+              canvasHeight / 2, 
+              canvasWidth / 2 + 55,
+              canvasHeight / 2 - 175
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+          />
+          <Line 
+            points={[
+              canvasWidth / 2 + 55,
+              canvasHeight / 2 - 175,
+              canvasWidth / 2 + 80,
+              canvasHeight / 2 - 175
+            ]} 
+            stroke="black" 
+            strokeWidth={1} 
+          />
+
+          <Text 
+            x={canvasWidth / 2 + 95}               
+              y={canvasHeight / 2 - 185}
+              text="Intended"
+              fontSize={14} 
+              fill="black" 
+          />
+          <Text 
+            x={canvasWidth / 2 + 77} 
+            y={canvasHeight / 2 - 169}
+            text="Screen Position"
+            fontSize={14} 
+            fill="black" 
           />
 
           {/* Top Left Horizontal Line Marker */}
