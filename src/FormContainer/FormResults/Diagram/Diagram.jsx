@@ -18,6 +18,9 @@ const Diagram = () => {
   let mountWidth = state.selectedMount.Width;
   let mountHeight = state.selectedMount.Height;
 
+  let receptacleBoxWidth = state.selectedReceptacleBox.Width;
+  let receptacleBoxHeight = state.selectedReceptacleBox.Height;
+
   let outerNiche = state.nicheGap;
 
   let canvasWidth = window.innerWidth / 3;
@@ -60,6 +63,8 @@ const Diagram = () => {
       monitorHeight *= diagramScale1;
       mountWidth *= diagramScale1; 
       mountHeight *= diagramScale1;
+      receptacleBoxWidth *= diagramScale1; 
+      receptacleBoxHeight *= diagramScale1;
       outerNiche *= diagramScale1;
       break;
     case monitorWidth > 100:
@@ -67,6 +72,8 @@ const Diagram = () => {
       monitorHeight *= diagramScale2;
       mountWidth *= diagramScale2; 
       mountHeight *= diagramScale2;
+      receptacleBoxWidth *= diagramScale2; 
+      receptacleBoxHeight *= diagramScale2;
       outerNiche *= diagramScale2;
       break;
     case monitorWidth > 80:
@@ -74,6 +81,8 @@ const Diagram = () => {
       monitorHeight *= diagramScale3;
       mountWidth *= diagramScale3; 
       mountHeight *= diagramScale3;
+      receptacleBoxWidth *= diagramScale3; 
+      receptacleBoxHeight *= diagramScale3;
       outerNiche *= diagramScale3;
       break;
     case monitorWidth > 50:
@@ -81,6 +90,8 @@ const Diagram = () => {
       monitorHeight *= diagramScale4;
       mountWidth *= diagramScale4; 
       mountHeight *= diagramScale4;
+      receptacleBoxWidth *= diagramScale4; 
+      receptacleBoxHeight *= diagramScale4;
       outerNiche *= diagramScale4;
       break;
     case monitorWidth > 20:
@@ -88,6 +99,8 @@ const Diagram = () => {
       monitorHeight *= diagramScale5;
       mountWidth *= diagramScale5; 
       mountHeight *= diagramScale5;
+      receptacleBoxWidth *= diagramScale5; 
+      receptacleBoxHeight *= diagramScale5;
       outerNiche *= diagramScale5;
       break;
     default:
@@ -95,6 +108,8 @@ const Diagram = () => {
       monitorHeight *= diagramScale6;
       mountWidth *= diagramScale6; 
       mountHeight *= diagramScale6;
+      receptacleBoxWidth *= diagramScale6; 
+      receptacleBoxHeight *= diagramScale6;
       outerNiche *= diagramScale6;
   }
 
@@ -157,7 +172,29 @@ const Diagram = () => {
             stroke="black"
             strokeWidth={1}
             dash={[10, 10]}
-          />  
+          />
+
+          {/* Receptacle Box */}
+          <Rect
+            x={canvasWidth / 2 - receptacleBoxWidth / 2}
+            y={screenPositionY + monitorHeight - receptacleBoxHeight - 12}
+            width={receptacleBoxWidth}
+            height={receptacleBoxHeight}
+            fill="transparent"
+            stroke="black"
+            strokeWidth={1}
+            dash={[3, 3]}
+          />
+          <Rect
+            x={canvasWidth / 2 - receptacleBoxWidth / 2 - 2}
+            y={screenPositionY + monitorHeight - receptacleBoxHeight - 2 - 12}
+            width={receptacleBoxWidth + 4}
+            height={receptacleBoxHeight + 4}
+            fill="transparent"
+            stroke="black"
+            strokeWidth={1}
+            dash={[3, 3]}
+          />
 
           {/* Screen Width Label (Position: Top Center) */}
           <Rect
