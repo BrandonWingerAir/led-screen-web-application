@@ -120,18 +120,6 @@ const Diagram = () => {
   let centerMountWidth = (canvasWidth - mountWidth) / 2;
   let centerMountHeight = (canvasHeight - mountHeight) / 2;
 
-  // Set monitor dimensions based on orientation
-  let floorLineX = 0;
-  let floorLineY = 0;
-
-  if (state.orientation == "horizontal") {
-    floorLineX = monitorWidth;
-    floorLineY = monitorHeight;
-  } else {
-    floorLineX = monitorHeight;
-    floorLineY = monitorWidth;
-  }
-
   // Render Canvas
   return (
     <div 
@@ -198,8 +186,8 @@ const Diagram = () => {
 
           {/* Screen Width Label (Position: Top Center) */}
           <Rect
-            x={screenPositionX + monitorWidth * 0.5 - 72} 
-            y={screenPositionY - monitorHeight * 0.25 - 50}
+            x={screenPositionX + monitorWidth * 0.5 - 70} 
+            y={screenPositionY - outerNiche / 2 - 70}
             width={60}
             height={40}
             fill="#f5f5f5"
@@ -207,8 +195,8 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={screenPositionX + monitorWidth * 0.5 - 62} 
-            y={screenPositionY - monitorHeight * 0.25 - 36}
+            x={screenPositionX + monitorWidth * 0.5 - 59} 
+            y={screenPositionY - outerNiche / 2 - 55}
             text={`${
               state.orientation == 'horizontal' ? 
                 state.selectedScreen.Width 
@@ -236,7 +224,7 @@ const Diagram = () => {
 
           {/* Screen Height Label (Position: Right Center) */}
           <Rect
-            x={screenPositionX + monitorWidth + 34} 
+            x={screenPositionX + monitorWidth + outerNiche / 2 + 34} 
             y={screenPositionY + monitorHeight * 0.5 - 50}
             width={60}
             height={40}
@@ -245,7 +233,7 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={screenPositionX + monitorWidth + 44} 
+            x={screenPositionX + monitorWidth + outerNiche / 2 + 44} 
             y={screenPositionY + monitorHeight * 0.5 - 36}
             text={`${
               state.orientation == 'horizontal' ? 
@@ -259,9 +247,9 @@ const Diagram = () => {
           {/* Screen Height Arrows Line (Position: Right) */}
           <Arrow 
             points={[
-              screenPositionX + monitorWidth + 25, 
+              screenPositionX + monitorWidth + 25 + outerNiche / 2, 
               screenPositionY + 3,
-              screenPositionX + monitorWidth + 25, 
+              screenPositionX + monitorWidth + 25 + outerNiche / 2, 
               screenPositionY + monitorHeight - 3
             ]} 
             stroke="black" 
@@ -275,7 +263,7 @@ const Diagram = () => {
           {/* Niche Width Label (Position: Bottom Center) */}
           <Rect
             x={screenPositionX + monitorWidth * 0.5 - 72}
-            y={screenPositionY + monitorHeight + 34}
+            y={screenPositionY + monitorHeight + outerNiche / 2 + 34}
             width={60}
             height={40}
             fill="#f5f5f5"
@@ -284,7 +272,7 @@ const Diagram = () => {
           />
           <Text 
             x={screenPositionX + monitorWidth * 0.5 - 62} 
-            y={screenPositionY + monitorHeight + 48}
+            y={screenPositionY + monitorHeight + outerNiche / 2 + 48}
             text={`${
               state.orientation == 'horizontal' ? 
                 totalWidth
@@ -298,9 +286,9 @@ const Diagram = () => {
           <Arrow 
             points={[
               screenPositionX - outerNiche / 2 + 3, 
-              screenPositionY + monitorHeight + 25,
+              screenPositionY + monitorHeight + 25 + outerNiche / 2,
               screenPositionX + monitorWidth + outerNiche / 2 - 3, 
-              screenPositionY + monitorHeight + 25
+              screenPositionY + monitorHeight + 25 + outerNiche / 2
             ]} 
             stroke="black" 
             strokeWidth={1}
@@ -312,7 +300,7 @@ const Diagram = () => {
 
           {/* Niche Height Label (Position: Left Center) */}
           <Rect
-            x={screenPositionX - monitorWidth / 2 + outerNiche / 2} 
+            x={screenPositionX - outerNiche / 2 - 95} 
             y={screenPositionY + monitorHeight * 0.5 - 50}
             width={60}
             height={40}
@@ -321,7 +309,7 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={screenPositionX - monitorWidth / 2 + 10} 
+            x={screenPositionX - outerNiche / 2 - 85} 
             y={screenPositionY + monitorHeight / 2 - 36}
             text={`${
               state.orientation == 'horizontal' ? 
@@ -335,9 +323,9 @@ const Diagram = () => {
           {/* Niche Height Arrows Line (Position: Left) */}
           <Arrow 
             points={[
-              screenPositionX - 25, 
+              screenPositionX - 25 - outerNiche / 2, 
               screenPositionY - outerNiche / 2 + 3,
-              screenPositionX - 25, 
+              screenPositionX - 25 - outerNiche / 2, 
               screenPositionY + monitorHeight + outerNiche / 2 - 3
             ]} 
             stroke="black" 
@@ -437,7 +425,7 @@ const Diagram = () => {
             points={[
               canvasWidth / 2 + 6, 
               screenPositionY + monitorHeight - receptacleBoxHeight - 6, 
-              canvasWidth / 2 + 44,
+              canvasWidth / 2 + outerNiche / 2 + 44,
               screenPositionY - outerNiche / 2 - 40
             ]} 
             stroke="black" 
@@ -445,23 +433,23 @@ const Diagram = () => {
           />
           <Line 
             points={[
-              canvasWidth / 2 + 44,
+              canvasWidth / 2 + outerNiche / 2 + 44,
               screenPositionY - outerNiche / 2 - 40,
-              canvasWidth / 2 + 44 + monitorWidth * 0.1,
+              canvasWidth / 2 + monitorWidth * 0.1 + outerNiche / 2 + 44,
               screenPositionY - outerNiche / 2 - 40
             ]} 
             stroke="black" 
             strokeWidth={1} 
           />
           <Text 
-            x={canvasWidth / 2 + 42 + monitorWidth * 0.1 + 5}               
+            x={canvasWidth / 2 + monitorWidth * 0.1 + outerNiche / 2 + 42 + 5}               
             y={screenPositionY - outerNiche / 2 - 54}
             text="Install recessed"
             fontSize={13} 
             fill="black" 
           />
           <Text 
-            x={canvasWidth / 2 + 42 + monitorWidth * 0.1 + 8} 
+            x={canvasWidth / 2 + monitorWidth * 0.1 + outerNiche / 2 + 42 + 8} 
             y={screenPositionY - outerNiche / 2 - 39}
             text="receptacle box"
             fontSize={13}
@@ -562,7 +550,7 @@ const Diagram = () => {
 
           {/* Floor Line Distance Label (Position: Left Center Bottom) */}
           <Rect
-            x={screenPositionX - 115} 
+            x={screenPositionX - outerNiche / 2 - 115} 
             y={screenPositionY * 1.35}
             width={60}
             height={40}
@@ -571,23 +559,23 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={screenPositionX - 94} 
+            x={screenPositionX - outerNiche / 2 - 93} 
             y={screenPositionY * 1.35 + 16}
             text={state.floorLine + `"`}
             fontSize={12} 
             fill="black" 
           />
           
-          {/* Title under floor distance box (Position: Left Bottom */}
+          {/* Floor Distance Label Text (Position: Left Bottom */}
           <Text 
-            x={screenPositionX - 120} 
+            x={screenPositionX - 120 - outerNiche / 2} 
             y={screenPositionY * 1.35 + 48}
             text={`Centerline of`}
             fontSize={12} 
             fill="black" 
           />
           <Text 
-            x={screenPositionX - 106} 
+            x={screenPositionX - 106 - outerNiche / 2} 
             y={screenPositionY * 1.35 + 64}
             text={`Display`}
             fontSize={12} 
@@ -597,9 +585,9 @@ const Diagram = () => {
           {/* Vertical Floor Distance Line */}
           <Arrow 
             points={[
-              screenPositionX - 34, 
+              screenPositionX - 34 - outerNiche / 2, 
               screenPositionY + monitorHeight / 2 + 20, 
-              screenPositionX - 34, 
+              screenPositionX - 34 - outerNiche / 2, 
               floorLine
             ]}
             stroke="black" 
