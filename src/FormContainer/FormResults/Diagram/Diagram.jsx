@@ -23,8 +23,15 @@ const Diagram = () => {
 
   let outerNiche = state.nicheGap;
 
-  let canvasWidth = window.innerWidth / 2.5;
-  let canvasHeight = window.innerHeight - 180;
+  let canvasParent = document.getElementById('led-screens-diagram-canvas');
+
+  let canvasWidth = 0;
+  let canvasHeight = 0;
+
+  if (canvasParent) {
+    canvasWidth = canvasParent.clientWidth;
+    canvasHeight = canvasParent.clientHeight;
+  }
   
   if (canvasHeight > 800) {
     canvasHeight /= 1.5;
@@ -50,7 +57,7 @@ const Diagram = () => {
   }
 
   // Scale Selection
-  const diagramScale1 = 0.4;
+  const diagramScale1 = 0.5;
   const diagramScale2 = 2;
   const diagramScale3 = 3;
   const diagramScale4 = 4;
@@ -389,7 +396,7 @@ const Diagram = () => {
             points={[
               canvasWidth / 2, 
               canvasHeight / 2, 
-              canvasWidth / 2 + outerNiche / 2 + 55,
+              canvasWidth / 2 + outerNiche / 2 + 44,
               canvasHeight / 2 - outerNiche / 2 - 175
             ]} 
             stroke="black" 
@@ -397,7 +404,7 @@ const Diagram = () => {
           />
           <Line 
             points={[
-              canvasWidth / 2 + outerNiche / 2 + 55,
+              canvasWidth / 2 + outerNiche / 2 + 45,
               canvasHeight / 2 - outerNiche / 2 - 175,
               canvasWidth / 2 + outerNiche / 2 + 80,
               canvasHeight / 2 - outerNiche / 2 - 175
@@ -425,7 +432,7 @@ const Diagram = () => {
             points={[
               canvasWidth / 2 + 6, 
               screenPositionY + monitorHeight - receptacleBoxHeight - 6, 
-              canvasWidth / 2 + outerNiche / 2 + 44,
+              canvasWidth / 2 + outerNiche / 2 + 36,
               screenPositionY - outerNiche / 2 - 40
             ]} 
             stroke="black" 
@@ -433,23 +440,23 @@ const Diagram = () => {
           />
           <Line 
             points={[
-              canvasWidth / 2 + outerNiche / 2 + 44,
+              canvasWidth / 2 + outerNiche / 2 + 36,
               screenPositionY - outerNiche / 2 - 40,
-              canvasWidth / 2 + monitorWidth * 0.1 + outerNiche / 2 + 44,
+              canvasWidth / 2 + monitorWidth * 0.1 + outerNiche / 2 + 36,
               screenPositionY - outerNiche / 2 - 40
             ]} 
             stroke="black" 
             strokeWidth={1} 
           />
           <Text 
-            x={canvasWidth / 2 + monitorWidth * 0.1 + outerNiche / 2 + 42 + 5}               
+            x={canvasWidth / 2 + monitorWidth * 0.1 + outerNiche / 2 + 34 + 5}               
             y={screenPositionY - outerNiche / 2 - 54}
             text="Install recessed"
             fontSize={13} 
             fill="black" 
           />
           <Text 
-            x={canvasWidth / 2 + monitorWidth * 0.1 + outerNiche / 2 + 42 + 8} 
+            x={canvasWidth / 2 + monitorWidth * 0.1 + outerNiche / 2 + 34 + 8} 
             y={screenPositionY - outerNiche / 2 - 39}
             text="receptacle box"
             fontSize={13}
@@ -550,8 +557,8 @@ const Diagram = () => {
 
           {/* Floor Line Distance Label (Position: Left Center Bottom) */}
           <Rect
-            x={screenPositionX - outerNiche / 2 - 115} 
-            y={screenPositionY * 1.35}
+            x={screenPositionX - outerNiche / 2 - 120} 
+            y={canvasHeight / 2 + 45}
             width={60}
             height={40}
             fill="#f5f5f5"
@@ -559,8 +566,8 @@ const Diagram = () => {
             strokeWidth={1}
           />
           <Text 
-            x={screenPositionX - outerNiche / 2 - 93} 
-            y={screenPositionY * 1.35 + 16}
+            x={screenPositionX - outerNiche / 2 - 99} 
+            y={canvasHeight / 2 + 60}
             text={state.floorLine + `"`}
             fontSize={12} 
             fill="black" 
@@ -568,15 +575,15 @@ const Diagram = () => {
           
           {/* Floor Distance Label Text (Position: Left Bottom */}
           <Text 
-            x={screenPositionX - 120 - outerNiche / 2} 
-            y={screenPositionY * 1.35 + 48}
+            x={screenPositionX - outerNiche / 2 - 125} 
+            y={canvasHeight / 2 + 90}
             text={`Centerline of`}
             fontSize={12} 
             fill="black" 
           />
           <Text 
-            x={screenPositionX - 106 - outerNiche / 2} 
-            y={screenPositionY * 1.35 + 64}
+            x={screenPositionX - outerNiche / 2 - 110} 
+            y={canvasHeight / 2 + 105}
             text={`Display`}
             fontSize={12} 
             fill="black" 
@@ -585,9 +592,9 @@ const Diagram = () => {
           {/* Vertical Floor Distance Line */}
           <Arrow 
             points={[
-              screenPositionX - 34 - outerNiche / 2, 
-              screenPositionY + monitorHeight / 2 + 20, 
-              screenPositionX - 34 - outerNiche / 2, 
+              screenPositionX - outerNiche / 2 - 40, 
+              screenPositionY + monitorHeight / 2 + 10, 
+              screenPositionX - outerNiche / 2 - 40, 
               floorLine
             ]}
             stroke="black" 
@@ -601,9 +608,9 @@ const Diagram = () => {
           {/* Horizontal Floor Line */}
           <Line 
             points={[
-              screenPositionX - 34, 
+              screenPositionX - outerNiche / 2 - 34, 
               floorLine + 14,
-              screenPositionX + monitorWidth + outerNiche + 21, 
+              screenPositionX + monitorWidth + outerNiche / 2 + 21, 
               floorLine + 14
             ]}
             stroke="black" 

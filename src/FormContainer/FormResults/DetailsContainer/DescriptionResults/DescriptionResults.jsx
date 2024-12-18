@@ -71,7 +71,7 @@ function DescriptionResults() {
         </div>
         <div>
           <div>
-            Revision
+            <p>Revision</p>
           </div>
           <div>
             00
