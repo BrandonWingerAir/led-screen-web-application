@@ -16,6 +16,7 @@ const DateInputBox = () => {
         type="date" 
         onChange={handleChange} 
         value={state.descriptionDate}
+        className='led-screens-desc-date-input'
       />
     </div>
   );

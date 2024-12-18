@@ -19,9 +19,9 @@ const FloorLineInputBox = () => {
           type="number" 
           onChange={handleChange} 
           value={state.floorLine}
-          className='led-screens-floor-line-input'
+          className='led-screens-number-input'
         />
-        <span className='led-screens-floor-inches'>"</span>
+        <span className='led-screens-input-inches'>"</span>
       </div>
     </div>
   );

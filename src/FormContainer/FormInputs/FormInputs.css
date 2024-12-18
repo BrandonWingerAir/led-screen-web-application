@@ -23,7 +23,7 @@
     margin: 9px 0;
 }
 
-.led-screens-floor-line-input {
+.led-screens-number-input {
     width: 50px;
     border: none;
 }
@@ -37,7 +37,11 @@
     color: #212121;
 }
 
-.led-screens-floor-inches {
+.led-screens-input-inches {
     position: relative;
     right: 30px;
+}
+
+.led-screens-desc-date-input {
+    width: 100%;
 }
