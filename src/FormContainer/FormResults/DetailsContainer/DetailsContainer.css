@@ -23,7 +23,7 @@
 
 .led-screens-dimension-grid p {
     height: 37px;
-    border: 1px solid #000;
+    border: 1px solid var(--led_screen_border_dark);
     margin: 6px 0;
     display: flex;
     justify-content: center;

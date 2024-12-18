@@ -3,7 +3,7 @@
 :root {
   --led_screen_app_padding: 30px;
   --led_screen_border_light: #bdbdbd;
-  --led_screen_border_dark: #424242;
+  --led_screen_border_dark: #616161;
 }
 
 html {

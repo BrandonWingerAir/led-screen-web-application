@@ -11,12 +11,12 @@ const NicheRadioBtn = () => {
 
   return (
     <div className='led-screens-radio-toggle'>
-      <form onChange={handleChange}>
-        <div>
-            <input type="radio" name="led_screens_radio_toggle" value="Niche" defaultChecked/>
+      <form onChange={handleChange} className='led-screens-config-grid'>
+        <div className={ state.wallType == "Niche" ? 'led-screens-selected-radio' : '' }>
+            <input type="radio" name="led_screens_radio_toggle" id="" value="Niche" defaultChecked/>
             <label htmlFor="niche">Niche</label>
         </div>
-        <div>
+        <div className={ state.wallType == "flatWall" ? 'led-screens-selected-radio' : '' }>
             <input type="radio" name="led_screens_radio_toggle" value="flatWall"/>
             <label htmlFor="flatWall">Flat Wall</label>
         </div>

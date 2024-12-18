@@ -2,20 +2,38 @@
     width: 100%;
 }
 
-/* Radio Button Inputs */
-.led-screens-radio-toggle form {
+.led-screens-config-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+}
+
+.led-screens-radio-toggle [type="radio"] {
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
     width: 100%;
+    position: absolute;
 }
 
-.led-screens-radio-toggle div {
+.led-screens-selected-radio {
+    background: #4f4f4f;
+}
+
+.led-screen-form-inputs .led-screens-selected-radio label {
+    color: #fff;
+}
+
+.led-screens-config-grid div {
+    height: 37px;
+    border: 1px solid var(--led_screen_border_dark);
+    margin: 6px 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.led-screens-radio-toggle form label {
-    color: #000;
-    position: relative;
-    top: 2px;
-    left: 1px;
+.led-screens-config-grid div:last-of-type {
+    border-left: none;
 }
