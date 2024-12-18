@@ -6,6 +6,7 @@
 .led-screen-flex-bottom {
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 
 .led-screen-details-section > div > div{
