@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 15px;
+    margin-top: calc(var(--led_screen_app_padding) / 4);
 }
 
 .led-screens-radio-toggle [type="radio"] {
@@ -27,7 +28,6 @@
 .led-screens-config-grid div {
     height: 37px;
     border: 1px solid var(--led_screen_border_dark);
-    margin: 6px 0;
     display: flex;
     justify-content: center;
     align-items: center;

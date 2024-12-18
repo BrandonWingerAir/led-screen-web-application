@@ -11,12 +11,12 @@ const OrientationRadioBtn = () => {
 
   return (
     <div className='led-screens-radio-toggle'>
-      <form onChange={handleChange}>
-        <div>
+      <form onChange={handleChange} className='led-screens-config-grid'>
+        <div className={ state.orientation == "vertical" ? 'led-screens-selected-radio' : '' }>
             <input type="radio" name="led_screens_radio_toggle" value="vertical"/>
             <label htmlFor="vertical">Vertical</label>
         </div>
-        <div>
+        <div className={ state.orientation == "horizontal" ? 'led-screens-selected-radio' : '' }>
             <input type="radio" name="led_screens_radio_toggle" value="horizontal" defaultChecked/>
             <label htmlFor="horizontal">Horizontal</label>
         </div>
