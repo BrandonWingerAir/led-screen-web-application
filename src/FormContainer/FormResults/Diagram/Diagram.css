@@ -2,3 +2,15 @@
     display: flex;
     justify-content: center;
 }
+
+@media only screen and (max-width: 1080px) {
+    .led-screens-canvas-container {
+        min-height: 75vh;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .led-screens-canvas-container {
+        min-height: 50vh;
+    }
+}
