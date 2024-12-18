@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import DataContext from '../../../DataContext.jsx';
-import { Stage, Layer, Rect, Line, Arrow, Text } from 'react-konva';
+import { Stage, Layer, Rect, Line, Arrow, Text, Arc, Circle } from 'react-konva';
 import "./Diagram.css";
   
 const Diagram = () => {
@@ -391,6 +391,52 @@ const Diagram = () => {
             dash={[4, 2]}
           />
 
+          {/* Center Position Diagonal Line Circle */}
+          <Circle 
+            x={canvasWidth / 2}
+            y={canvasHeight / 2} 
+            radius={3} 
+            fill="white"
+            stroke="black"
+            strokeWidth={4}
+          />
+          <Arc 
+            x={canvasWidth / 2} 
+            y={canvasHeight / 2} 
+            innerRadius={0} 
+            outerRadius={4} 
+            angle={90} 
+            fill="black" 
+            rotation={90}
+          /> 
+          <Arc 
+            x={canvasWidth / 2} 
+            y={canvasHeight / 2} 
+            innerRadius={0} 
+            outerRadius={4} 
+            angle={90} 
+            fill="black" 
+            rotation={270}
+          /> 
+          <Arc 
+            x={canvasWidth / 2} 
+            y={canvasHeight / 2} 
+            innerRadius={0} 
+            outerRadius={4} 
+            angle={90} 
+            fill="white" 
+            rotation={0}
+          /> 
+          <Arc 
+            x={canvasWidth / 2} 
+            y={canvasHeight / 2} 
+            innerRadius={0} 
+            outerRadius={4} 
+            angle={90} 
+            fill="white" 
+            rotation={180}
+          />
+
           {/* Center Position Diagonal Line Label */}
           <Line 
             points={[
@@ -428,6 +474,12 @@ const Diagram = () => {
           />
 
           {/* Receptacle Box Diagonal Line Label */}
+          <Circle 
+            x={canvasWidth / 2 + 6}
+            y={screenPositionY + monitorHeight - receptacleBoxHeight - 6} 
+            radius={3} 
+            fill="black" 
+          />
           <Line 
             points={[
               canvasWidth / 2 + 6, 
