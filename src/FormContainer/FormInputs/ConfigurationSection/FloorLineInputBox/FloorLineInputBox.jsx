@@ -10,9 +10,19 @@ const FloorLineInputBox = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="led_screen_floor_line">Floor Distance</label>
-      <input type="number" onChange={handleChange} value={state.floorLine}/>
+    <div className='led-screens-config-grid'>
+      <div className='led-screens-floor-input-label'>
+        <label htmlFor="led_screen_floor_line">Floor Distance</label>
+      </div>
+      <div>
+        <input 
+          type="number" 
+          onChange={handleChange} 
+          value={state.floorLine}
+          className='led-screens-floor-line-input'
+        />
+        <span className='led-screens-floor-inches'>"</span>
+      </div>
     </div>
   );
 };

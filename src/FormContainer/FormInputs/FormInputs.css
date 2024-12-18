@@ -5,6 +5,10 @@
     margin-bottom: calc(var(--led_screen_app_padding) / 2);
 }
 
+.led-screen-form-inputs select {
+    width: 100%;
+}
+
 .led-screens-form-inputs h3 {
     font-weight: 500;
     margin-bottom: 15px;
@@ -17,4 +21,23 @@
 .led-screen-form-inputs label {
     color: #616161;
     margin: 9px 0;
+}
+
+.led-screens-floor-line-input {
+    width: 50px;
+    border: none;
+}
+
+.led-screens-floor-input-label {
+    background: #e7e7e7;
+    text-align: center;
+}
+
+.led-screen-form-inputs .led-screens-floor-input-label label {
+    color: #212121;
+}
+
+.led-screens-floor-inches {
+    position: relative;
+    right: 30px;
 }

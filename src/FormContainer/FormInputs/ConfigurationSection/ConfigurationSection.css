@@ -1,10 +1,6 @@
-.led-screen-form-configuration select {
-    width: 100%;
-}
-
 .led-screens-config-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     font-size: 15px;
     margin-top: calc(var(--led_screen_app_padding) / 4);
 }
@@ -25,7 +21,7 @@
     color: #fff;
 }
 
-.led-screens-config-grid div {
+.led-screens-config-grid > div {
     height: 37px;
     border: 1px solid var(--led_screen_border_dark);
     display: flex;
